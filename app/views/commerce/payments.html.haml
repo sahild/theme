@@ -1,0 +1,142 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Credit card form
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a E-commerce
+      %li.active
+        %strong Credit card form
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-md-4
+      .payment-card
+        %i.fa.fa-cc-visa.payment-icon-big.text-success
+        %h2
+          **** **** **** 1060
+        .row
+          .col-sm-6
+            %small
+              %strong Expiry date:
+              10/16
+          .col-sm-6.text-right
+            %small
+              %strong Name:
+              David Williams
+    .col-md-4
+      .payment-card
+        %i.fa.fa-cc-mastercard.payment-icon-big.text-warning
+        %h2
+          **** **** **** 7002
+        .row
+          .col-sm-6
+            %small
+              %strong Expiry date:
+              10/16
+          .col-sm-6.text-right
+            %small
+              %strong Name:
+              Anna Smith
+    .col-md-4
+      .payment-card
+        %i.fa.fa-cc-discover.payment-icon-big.text-danger
+        %h2
+          **** **** **** 3466
+        .row
+          .col-sm-6
+            %small
+              %strong Expiry date:
+              10/16
+          .col-sm-6.text-right
+            %small
+              %strong Name:
+              Morgan Stanch
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          Payment method
+        .ibox-content
+          #accordion.panel-group.payments-method
+            .panel.panel-default
+              .panel-heading
+                .pull-right
+                  %i.fa.fa-cc-paypal.text-success
+                %h5.panel-title
+                  %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"} PayPal
+              #collapseOne.panel-collapse.collapse
+                .panel-body
+                  .row
+                    .col-md-10
+                      %h2 Summary
+                      = succeed ":" do
+                        %strong Product:
+                      %br/
+                      = succeed ":" do
+                        %strong Price:
+                      %span.text-navy $452.90
+                      %p.m-t
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                      %a.btn.btn-success
+                        %i.fa.fa-cc-paypal
+                          Purchase via PayPal
+            .panel.panel-default
+              .panel-heading
+                .pull-right
+                  %i.fa.fa-cc-amex.text-success
+                  %i.fa.fa-cc-mastercard.text-warning
+                  %i.fa.fa-cc-discover.text-danger
+                %h5.panel-title
+                  %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"} Credit Card
+              #collapseTwo.panel-collapse.collapse.in
+                .panel-body
+                  .row
+                    .col-md-4
+                      %h2 Summary
+                      = succeed ":" do
+                        %strong Product:
+                      %br/
+                      = succeed ":" do
+                        %strong Price:
+                      %span.text-navy $452.90
+                      %p.m-t
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                      %p
+                        Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat.
+                    .col-md-8
+                      %form#payment-form{:role => "form"}
+                        .row
+                          .col-xs-12
+                            .form-group
+                              %label CARD NUMBER
+                              .input-group
+                                %input.form-control{:name => "Number", :placeholder => "Valid Card Number", :required => "", :type => "text"}/
+                                %span.input-group-addon
+                                  %i.fa.fa-credit-card
+                        .row
+                          .col-xs-7.col-md-7
+                            .form-group
+                              %label EXPIRATION DATE
+                              %input.form-control{:name => "Expiry", :placeholder => "MM / YY", :required => "", :type => "text"}/
+                          .col-xs-5.col-md-5.pull-right
+                            .form-group
+                              %label CV CODE
+                              %input.form-control{:name => "CVC", :placeholder => "CVC", :required => "", :type => "text"}/
+                        .row
+                          .col-xs-12
+                            .form-group
+                              %label NAME OF CARD
+                              %input.form-control{:name => "nameCard", :placeholder => "NAME AND SURNAME", :type => "text"}/
+                        .row
+                          .col-xs-12
+                            %button.btn.btn-primary{:type => "submit"} Make a payment!

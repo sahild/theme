@@ -1,0 +1,219 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Tree view
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Tree view
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          %strong jsTree
+          is jquery plugin, that provides interactive trees. It is absolutely free, open source and distributed under the MIT license. jsTree is easily extendable, themable and configurable, it supports HTML  JSON data sources and AJAX loading.
+          Get more info on:
+          %a{:href => "http://www.jstree.com/", :target => "_blank"} http://www.jstree.com/
+  .row
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Basic example
+            %small with custom Font Awesome icons.
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          #jstree1
+            %ul
+              %li.jstree-open
+                Admin theme
+                %ul
+                  %li
+                    css
+                    %ul
+                      %li{"data-jstree" => "{\"type\":\"css\"}"} animate.css
+                      %li{"data-jstree" => "{\"type\":\"css\"}"} bootstrap.css
+                      %li{"data-jstree" => "{\"type\":\"css\"}"} style.css
+                  %li
+                    email-templates
+                    %ul
+                      %li{"data-jstree" => "{\"type\":\"html\"}"} action.html
+                      %li{"data-jstree" => "{\"type\":\"html\"}"} alert.html
+                      %li{"data-jstree" => "{\"type\":\"html\"}"} billing.html
+                  %li
+                    fonts
+                    %ul
+                      %li{"data-jstree" => "{\"type\":\"svg\"}"} glyphicons-halflings-regular.eot
+                      %li{"data-jstree" => "{\"type\":\"svg\"}"} glyphicons-halflings-regular.svg
+                      %li{"data-jstree" => "{\"type\":\"svg\"}"} glyphicons-halflings-regular.ttf
+                      %li{"data-jstree" => "{\"type\":\"svg\"}"} glyphicons-halflings-regular.woff
+                  %li.jstree-open
+                    img
+                    %ul
+                      %li{"data-jstree" => "{\"type\":\"img\"}"} profile_small.jpg
+                      %li{"data-jstree" => "{\"type\":\"img\"}"} angular_logo.png
+                      %li.text-navy{"data-jstree" => "{\"type\":\"img\"}"} html_logo.png
+                      %li.text-navy{"data-jstree" => "{\"type\":\"img\"}"} mvc_logo.png
+                  %li.jstree-open
+                    js
+                    %ul
+                      %li{"data-jstree" => "{\"type\":\"js\"}"} inspinia.js
+                      %li{"data-jstree" => "{\"type\":\"js\"}"} bootstrap.js
+                      %li{"data-jstree" => "{\"type\":\"js\"}"} jquery-2.1.1.js
+                      %li{"data-jstree" => "{\"type\":\"js\"}"} jquery-ui.custom.min.js
+                      %li.text-navy{"data-jstree" => "{\"type\":\"js\"}"} jquery-ui-1.10.4.min.js
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} affix.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} dashboard.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} buttons.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} calendar.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} contacts.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} css_animation.html
+                  %li.text-navy{"data-jstree" => "{\"type\":\"html\"}"} flot_chart.html
+                  %li.text-navy{"data-jstree" => "{\"type\":\"html\"}"} google_maps.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} icons.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} inboice.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} login.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} mailbox.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} profile.html
+                  %li.text-navy{"data-jstree" => "{\"type\":\"html\"}"} register.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} timeline.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} video.html
+                  %li{"data-jstree" => "{\"type\":\"html\"}"} widgets.html
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 JSON example
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          #using_json
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $('#jstree1').jstree({
+            'core': {
+                'check_callback': true
+            },
+            'plugins': ['types', 'dnd'],
+            'types': {
+                'default': {
+                    'icon': 'fa fa-folder'
+                },
+                'html': {
+                    'icon': 'fa fa-file-code-o'
+                },
+                'svg': {
+                    'icon': 'fa fa-file-picture-o'
+                },
+                'css': {
+                    'icon': 'fa fa-file-code-o'
+                },
+                'img': {
+                    'icon': 'fa fa-file-image-o'
+                },
+                'js': {
+                    'icon': 'fa fa-file-text-o'
+                }
+    
+            }
+        });
+    
+        $('#using_json').jstree({
+            'core': {
+                'data': [
+                    'Empty Folder',
+                    {
+                        'text': 'Resources',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [
+                            {
+                                'text': 'css',
+                                'children': [
+                                    {
+                                        'text': 'animate.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'bootstrap.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'main.css', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'style.css', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            },
+                            {
+                                'text': 'js',
+                                'children': [
+                                    {
+                                        'text': 'bootstrap.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'inspinia.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'jquery.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'jsTree.min.js', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'custom.min.js', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            },
+                            {
+                                'text': 'html',
+                                'children': [
+                                    {
+                                        'text': 'layout.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'navigation.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'navbar.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'footer.html', 'icon': 'none'
+                                    },
+                                    {
+                                        'text': 'sidebar.html', 'icon': 'none'
+                                    }
+                                ],
+                                'state': {
+                                    'opened': true
+                                }
+                            }
+                        ]
+                    },
+                    'Fonts',
+                    'Images',
+                    'Scripts',
+                    'Templates',
+                ]
+            }
+        });
+    
+    });

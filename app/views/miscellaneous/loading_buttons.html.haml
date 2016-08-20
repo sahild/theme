@@ -1,0 +1,132 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Loading buttons
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Loading buttons
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5 Loading buttons - Ladda
+        .ibox-content
+          %strong Ladda
+          %p
+            A UI concept which merges loading indicators into the action that invoked them. Primarily intended for use with forms where it gives users immediate feedback upon submit rather than leaving them wondering while the browser does its thing.
+          .row
+            .col-sm-3
+              %h4 expand-left
+              %button.ladda-button.btn.btn-primary{"data-style" => "expand-left"} Submit
+            .col-sm-3
+              %h4 expand-right
+              %button.ladda-button.btn.btn-primary{"data-style" => "expand-right"} Submit
+            .col-sm-3
+              %h4 expand-up
+              %button.ladda-button.btn.btn-primary{"data-style" => "expand-up"} Submit
+            .col-sm-3
+              %h4 expand-down
+              %button.ladda-button.btn.btn-primary{"data-style" => "expand-down"} Submit
+          .row.m-t-md
+            .col-sm-3
+              %h4 contract
+              %button.ladda-button.btn.btn-warning{"data-style" => "contract"} Submit
+            .col-sm-3
+              %h4 zoom-in
+              %button.ladda-button.btn.btn-warning{"data-style" => "zoom-in"} Submit
+            .col-sm-3
+              %h4 zoom-out
+              %button.ladda-button.btn.btn-warning{"data-style" => "zoom-out"} Submit
+          .row.m-t-md
+            .col-sm-3
+              %h4 slide-left
+              %button.ladda-button.btn.btn-info{"data-style" => "slide-left"} Submit
+            .col-sm-3
+              %h4 slide-right
+              %button.ladda-button.btn.btn-info{"data-style" => "slide-right"} Submit
+            .col-sm-3
+              %h4 slide-up
+              %button.ladda-button.btn.btn-info{"data-style" => "slide-up"} Submit
+            .col-sm-3
+              %h4 slide-down
+              %button.ladda-button.btn.btn-info{"data-style" => "slide-down"} Submit
+          .row.m-t-lg
+            .col-sm-3
+              %section.progress-demo
+                %h4 expand-right
+                %button.ladda-button.btn.btn-danger{"data-style" => "expand-right"} Submit
+            .col-sm-3
+              %section.progress-demo
+                %h4 contract
+                %button.ladda-button.btn.btn-danger{"data-style" => "contract"} Submit
+          .m-t-lg
+            %h4.m-t-md Demo how to use with api services
+          .row
+            .col-sm-3
+              %button.ladda-button.ladda-button-demo.btn.btn-primary{"data-style" => "zoom-in"} Submit
+            .col-sm-9
+              %pre
+                :preserve
+                  
+                  <button class="ladda-button ladda-button-demo btn btn-primary"  data-style="zoom-in">Submit</button>
+              %pre
+                :preserve
+                  
+                  var l = $( '.ladda-button-demo' ).ladda();
+                        l.click(function()
+                  
+                            // Start loading
+                            l.ladda( 'start' );
+                  
+                            // Do something in backend and then stop ladda
+                            // setTimeout() is only for demo purpose
+                            setTimeout(function()
+                                l.ladda('stop');
+                            },2000)
+                  
+                        });
+- content_for :javascript do
+  :javascript
+    $(function() {
+
+        // Bind normal buttons
+        $( '.ladda-button' ).ladda( 'bind', { timeout: 2000 } );
+
+        // Bind progress buttons and simulate loading progress
+        Ladda.bind( '.progress-demo .ladda-button',{
+            callback: function( instance ){
+                var progress = 0;
+                var interval = setInterval( function(){
+                    progress = Math.min( progress + Math.random() * 0.1, 1 );
+                    instance.setProgress( progress );
+
+                    if( progress === 1 ){
+                        instance.stop();
+                        clearInterval( interval );
+                    }
+                }, 200 );
+            }
+        });
+
+
+        var l = $( '.ladda-button-demo' ).ladda();
+
+        l.click(function(){
+            // Start loading
+            l.ladda( 'start' );
+
+            // Timeout example
+            // Do something in backend and then stop ladda
+            setTimeout(function(){
+                l.ladda('stop');
+            },12000)
+
+
+        });
+
+    });

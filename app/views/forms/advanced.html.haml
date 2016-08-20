@@ -1,0 +1,1480 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Advanced Form Elements
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong Advanced Form Elements
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-5
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Knob input
+            %small http://anthonyterrien.com/knob/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Knob - Dial
+          %p
+            Easily create knob input style.
+          .text-center
+            %small Simple knob example
+            %br/
+            %br/
+            .m-r-md.inline
+              %input.dial.m-r-sm{"data-fgcolor" => "#1AB394", "data-height" => "85", "data-width" => "85", :type => "text", :value => "75"}/
+            .m-r-md.inline
+              %input.dial.m-r{"data-fgcolor" => "#1AB394", "data-height" => "85", "data-width" => "85", :type => "text", :value => "25"}/
+            .m-r-md.inline
+              %input.dial.m-r{"data-fgcolor" => "#1AB394", "data-height" => "85", "data-width" => "85", :type => "text", :value => "50"}/
+          .text-center
+            %small Dynamic knob example
+            %br/
+            %br/
+            .m-r-md.inline
+              %input.dial.m-r-sm{"data-cursor" => "true", "data-fgcolor" => "#ED5565", "data-height" => "85", "data-thickness" => ".3/", "data-width" => "85", :type => "text", :value => "75"}/
+            .m-r-md.inline
+              %input.dial.m-r{"data-displayprevious" => "true/", "data-fgcolor" => "#ED5565", "data-height" => "85", "data-max" => "15000", "data-min" => "-15000", "data-step" => "1000", "data-width" => "85", :type => "text", :value => "25"}/
+            .m-r-md.inline
+              %input.dial.m-r{"data-anglearc" => "250", "data-angleoffset" => "-125", "data-fgcolor" => "#ED5565", "data-height" => "85", "data-width" => "85", :type => "text", :value => "60"}/
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Chosen select
+            %small http://harvesthq.github.io/chosen/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            With chosen select uesr can fase chose from large in select input.
+          .form-group
+            %label.font-noraml Basic example
+            .input-group
+              %select.chosen-select{"data-placeholder" => "Choose a Country...", :style => "width:350px;", :tabindex => "2"}
+                %option{:value => ""} Select
+                %option{:value => "United States"} United States
+                %option{:value => "United Kingdom"} United Kingdom
+                %option{:value => "Afghanistan"} Afghanistan
+                %option{:value => "Aland Islands"} Aland Islands
+                %option{:value => "Albania"} Albania
+                %option{:value => "Algeria"} Algeria
+                %option{:value => "American Samoa"} American Samoa
+                %option{:value => "Andorra"} Andorra
+                %option{:value => "Angola"} Angola
+                %option{:value => "Anguilla"} Anguilla
+                %option{:value => "Antarctica"} Antarctica
+                %option{:value => "Antigua and Barbuda"} Antigua and Barbuda
+                %option{:value => "Argentina"} Argentina
+                %option{:value => "Armenia"} Armenia
+                %option{:value => "Aruba"} Aruba
+                %option{:value => "Australia"} Australia
+                %option{:value => "Austria"} Austria
+                %option{:value => "Azerbaijan"} Azerbaijan
+                %option{:value => "Bahamas"} Bahamas
+                %option{:value => "Bahrain"} Bahrain
+                %option{:value => "Bangladesh"} Bangladesh
+                %option{:value => "Barbados"} Barbados
+                %option{:value => "Belarus"} Belarus
+                %option{:value => "Belgium"} Belgium
+                %option{:value => "Belize"} Belize
+                %option{:value => "Benin"} Benin
+                %option{:value => "Bermuda"} Bermuda
+                %option{:value => "Bhutan"} Bhutan
+                %option{:value => "Bolivia, Plurinational State of"} Bolivia, Plurinational State of
+                %option{:value => "Bonaire, Sint Eustatius and Saba"} Bonaire, Sint Eustatius and Saba
+                %option{:value => "Bosnia and Herzegovina"} Bosnia and Herzegovina
+                %option{:value => "Botswana"} Botswana
+                %option{:value => "Bouvet Island"} Bouvet Island
+                %option{:value => "Brazil"} Brazil
+                %option{:value => "British Indian Ocean Territory"} British Indian Ocean Territory
+                %option{:value => "Brunei Darussalam"} Brunei Darussalam
+                %option{:value => "Bulgaria"} Bulgaria
+                %option{:value => "Burkina Faso"} Burkina Faso
+                %option{:value => "Burundi"} Burundi
+                %option{:value => "Cambodia"} Cambodia
+                %option{:value => "Cameroon"} Cameroon
+                %option{:value => "Canada"} Canada
+                %option{:value => "Cape Verde"} Cape Verde
+                %option{:value => "Cayman Islands"} Cayman Islands
+                %option{:value => "Central African Republic"} Central African Republic
+                %option{:value => "Chad"} Chad
+                %option{:value => "Chile"} Chile
+                %option{:value => "China"} China
+                %option{:value => "Christmas Island"} Christmas Island
+                %option{:value => "Cocos (Keeling) Islands"} Cocos (Keeling) Islands
+                %option{:value => "Colombia"} Colombia
+                %option{:value => "Comoros"} Comoros
+                %option{:value => "Congo"} Congo
+                %option{:value => "Congo, The Democratic Republic of The"} Congo, The Democratic Republic of The
+                %option{:value => "Cook Islands"} Cook Islands
+                %option{:value => "Costa Rica"} Costa Rica
+                %option{:value => "Cote D'ivoire"} Cote D'ivoire
+                %option{:value => "Croatia"} Croatia
+                %option{:value => "Cuba"} Cuba
+                %option{:value => "Curacao"} Curacao
+                %option{:value => "Cyprus"} Cyprus
+                %option{:value => "Czech Republic"} Czech Republic
+                %option{:value => "Denmark"} Denmark
+                %option{:value => "Djibouti"} Djibouti
+                %option{:value => "Dominica"} Dominica
+                %option{:value => "Dominican Republic"} Dominican Republic
+                %option{:value => "Ecuador"} Ecuador
+                %option{:value => "Egypt"} Egypt
+                %option{:value => "El Salvador"} El Salvador
+                %option{:value => "Equatorial Guinea"} Equatorial Guinea
+                %option{:value => "Eritrea"} Eritrea
+                %option{:value => "Estonia"} Estonia
+                %option{:value => "Ethiopia"} Ethiopia
+                %option{:value => "Falkland Islands (Malvinas)"} Falkland Islands (Malvinas)
+                %option{:value => "Faroe Islands"} Faroe Islands
+                %option{:value => "Fiji"} Fiji
+                %option{:value => "Finland"} Finland
+                %option{:value => "France"} France
+                %option{:value => "French Guiana"} French Guiana
+                %option{:value => "French Polynesia"} French Polynesia
+                %option{:value => "French Southern Territories"} French Southern Territories
+                %option{:value => "Gabon"} Gabon
+                %option{:value => "Gambia"} Gambia
+                %option{:value => "Georgia"} Georgia
+                %option{:value => "Germany"} Germany
+                %option{:value => "Ghana"} Ghana
+                %option{:value => "Gibraltar"} Gibraltar
+                %option{:value => "Greece"} Greece
+                %option{:value => "Greenland"} Greenland
+                %option{:value => "Grenada"} Grenada
+                %option{:value => "Guadeloupe"} Guadeloupe
+                %option{:value => "Guam"} Guam
+                %option{:value => "Guatemala"} Guatemala
+                %option{:value => "Guernsey"} Guernsey
+                %option{:value => "Guinea"} Guinea
+                %option{:value => "Guinea-bissau"} Guinea-bissau
+                %option{:value => "Guyana"} Guyana
+                %option{:value => "Haiti"} Haiti
+                %option{:value => "Heard Island and Mcdonald Islands"} Heard Island and Mcdonald Islands
+                %option{:value => "Holy See (Vatican City State)"} Holy See (Vatican City State)
+                %option{:value => "Honduras"} Honduras
+                %option{:value => "Hong Kong"} Hong Kong
+                %option{:value => "Hungary"} Hungary
+                %option{:value => "Iceland"} Iceland
+                %option{:value => "India"} India
+                %option{:value => "Indonesia"} Indonesia
+                %option{:value => "Iran, Islamic Republic of"} Iran, Islamic Republic of
+                %option{:value => "Iraq"} Iraq
+                %option{:value => "Ireland"} Ireland
+                %option{:value => "Isle of Man"} Isle of Man
+                %option{:value => "Israel"} Israel
+                %option{:value => "Italy"} Italy
+                %option{:value => "Jamaica"} Jamaica
+                %option{:value => "Japan"} Japan
+                %option{:value => "Jersey"} Jersey
+                %option{:value => "Jordan"} Jordan
+                %option{:value => "Kazakhstan"} Kazakhstan
+                %option{:value => "Kenya"} Kenya
+                %option{:value => "Kiribati"} Kiribati
+                %option{:value => "Korea, Democratic People's Republic of"} Korea, Democratic People's Republic of
+                %option{:value => "Korea, Republic of"} Korea, Republic of
+                %option{:value => "Kuwait"} Kuwait
+                %option{:value => "Kyrgyzstan"} Kyrgyzstan
+                %option{:value => "Lao People's Democratic Republic"} Lao People's Democratic Republic
+                %option{:value => "Latvia"} Latvia
+                %option{:value => "Lebanon"} Lebanon
+                %option{:value => "Lesotho"} Lesotho
+                %option{:value => "Liberia"} Liberia
+                %option{:value => "Libya"} Libya
+                %option{:value => "Liechtenstein"} Liechtenstein
+                %option{:value => "Lithuania"} Lithuania
+                %option{:value => "Luxembourg"} Luxembourg
+                %option{:value => "Macao"} Macao
+                %option{:value => "Macedonia, The Former Yugoslav Republic of"} Macedonia, The Former Yugoslav Republic of
+                %option{:value => "Madagascar"} Madagascar
+                %option{:value => "Malawi"} Malawi
+                %option{:value => "Malaysia"} Malaysia
+                %option{:value => "Maldives"} Maldives
+                %option{:value => "Mali"} Mali
+                %option{:value => "Malta"} Malta
+                %option{:value => "Marshall Islands"} Marshall Islands
+                %option{:value => "Martinique"} Martinique
+                %option{:value => "Mauritania"} Mauritania
+                %option{:value => "Mauritius"} Mauritius
+                %option{:value => "Mayotte"} Mayotte
+                %option{:value => "Mexico"} Mexico
+                %option{:value => "Micronesia, Federated States of"} Micronesia, Federated States of
+                %option{:value => "Moldova, Republic of"} Moldova, Republic of
+                %option{:value => "Monaco"} Monaco
+                %option{:value => "Mongolia"} Mongolia
+                %option{:value => "Montenegro"} Montenegro
+                %option{:value => "Montserrat"} Montserrat
+                %option{:value => "Morocco"} Morocco
+                %option{:value => "Mozambique"} Mozambique
+                %option{:value => "Myanmar"} Myanmar
+                %option{:value => "Namibia"} Namibia
+                %option{:value => "Nauru"} Nauru
+                %option{:value => "Nepal"} Nepal
+                %option{:value => "Netherlands"} Netherlands
+                %option{:value => "New Caledonia"} New Caledonia
+                %option{:value => "New Zealand"} New Zealand
+                %option{:value => "Nicaragua"} Nicaragua
+                %option{:value => "Niger"} Niger
+                %option{:value => "Nigeria"} Nigeria
+                %option{:value => "Niue"} Niue
+                %option{:value => "Norfolk Island"} Norfolk Island
+                %option{:value => "Northern Mariana Islands"} Northern Mariana Islands
+                %option{:value => "Norway"} Norway
+                %option{:value => "Oman"} Oman
+                %option{:value => "Pakistan"} Pakistan
+                %option{:value => "Palau"} Palau
+                %option{:value => "Palestinian Territory, Occupied"} Palestinian Territory, Occupied
+                %option{:value => "Panama"} Panama
+                %option{:value => "Papua New Guinea"} Papua New Guinea
+                %option{:value => "Paraguay"} Paraguay
+                %option{:value => "Peru"} Peru
+                %option{:value => "Philippines"} Philippines
+                %option{:value => "Pitcairn"} Pitcairn
+                %option{:value => "Poland"} Poland
+                %option{:value => "Portugal"} Portugal
+                %option{:value => "Puerto Rico"} Puerto Rico
+                %option{:value => "Qatar"} Qatar
+                %option{:value => "Reunion"} Reunion
+                %option{:value => "Romania"} Romania
+                %option{:value => "Russian Federation"} Russian Federation
+                %option{:value => "Rwanda"} Rwanda
+                %option{:value => "Saint Barthelemy"} Saint Barthelemy
+                %option{:value => "Saint Helena, Ascension and Tristan da Cunha"} Saint Helena, Ascension and Tristan da Cunha
+                %option{:value => "Saint Kitts and Nevis"} Saint Kitts and Nevis
+                %option{:value => "Saint Lucia"} Saint Lucia
+                %option{:value => "Saint Martin (French part)"} Saint Martin (French part)
+                %option{:value => "Saint Pierre and Miquelon"} Saint Pierre and Miquelon
+                %option{:value => "Saint Vincent and The Grenadines"} Saint Vincent and The Grenadines
+                %option{:value => "Samoa"} Samoa
+                %option{:value => "San Marino"} San Marino
+                %option{:value => "Sao Tome and Principe"} Sao Tome and Principe
+                %option{:value => "Saudi Arabia"} Saudi Arabia
+                %option{:value => "Senegal"} Senegal
+                %option{:value => "Serbia"} Serbia
+                %option{:value => "Seychelles"} Seychelles
+                %option{:value => "Sierra Leone"} Sierra Leone
+                %option{:value => "Singapore"} Singapore
+                %option{:value => "Sint Maarten (Dutch part)"} Sint Maarten (Dutch part)
+                %option{:value => "Slovakia"} Slovakia
+                %option{:value => "Slovenia"} Slovenia
+                %option{:value => "Solomon Islands"} Solomon Islands
+                %option{:value => "Somalia"} Somalia
+                %option{:value => "South Africa"} South Africa
+                %option{:value => "South Georgia and The South Sandwich Islands"} South Georgia and The South Sandwich Islands
+                %option{:value => "South Sudan"} South Sudan
+                %option{:value => "Spain"} Spain
+                %option{:value => "Sri Lanka"} Sri Lanka
+                %option{:value => "Sudan"} Sudan
+                %option{:value => "Suriname"} Suriname
+                %option{:value => "Svalbard and Jan Mayen"} Svalbard and Jan Mayen
+                %option{:value => "Swaziland"} Swaziland
+                %option{:value => "Sweden"} Sweden
+                %option{:value => "Switzerland"} Switzerland
+                %option{:value => "Syrian Arab Republic"} Syrian Arab Republic
+                %option{:value => "Taiwan, Province of China"} Taiwan, Province of China
+                %option{:value => "Tajikistan"} Tajikistan
+                %option{:value => "Tanzania, United Republic of"} Tanzania, United Republic of
+                %option{:value => "Thailand"} Thailand
+                %option{:value => "Timor-leste"} Timor-leste
+                %option{:value => "Togo"} Togo
+                %option{:value => "Tokelau"} Tokelau
+                %option{:value => "Tonga"} Tonga
+                %option{:value => "Trinidad and Tobago"} Trinidad and Tobago
+                %option{:value => "Tunisia"} Tunisia
+                %option{:value => "Turkey"} Turkey
+                %option{:value => "Turkmenistan"} Turkmenistan
+                %option{:value => "Turks and Caicos Islands"} Turks and Caicos Islands
+                %option{:value => "Tuvalu"} Tuvalu
+                %option{:value => "Uganda"} Uganda
+                %option{:value => "Ukraine"} Ukraine
+                %option{:value => "United Arab Emirates"} United Arab Emirates
+                %option{:value => "United Kingdom"} United Kingdom
+                %option{:value => "United States"} United States
+                %option{:value => "United States Minor Outlying Islands"} United States Minor Outlying Islands
+                %option{:value => "Uruguay"} Uruguay
+                %option{:value => "Uzbekistan"} Uzbekistan
+                %option{:value => "Vanuatu"} Vanuatu
+                %option{:value => "Venezuela, Bolivarian Republic of"} Venezuela, Bolivarian Republic of
+                %option{:value => "Viet Nam"} Viet Nam
+                %option{:value => "Virgin Islands, British"} Virgin Islands, British
+                %option{:value => "Virgin Islands, U.S."} Virgin Islands, U.S.
+                %option{:value => "Wallis and Futuna"} Wallis and Futuna
+                %option{:value => "Western Sahara"} Western Sahara
+                %option{:value => "Yemen"} Yemen
+                %option{:value => "Zambia"} Zambia
+                %option{:value => "Zimbabwe"} Zimbabwe
+          .form-group
+            %label.font-noraml Multi select
+            .input-group
+              %select.chosen-select{"data-placeholder" => "Choose a Country...", :multiple => "multiple", :style => "width:350px;", :tabindex => "4"}
+                %option{:value => ""} Select
+                %option{:value => "United States"} United States
+                %option{:value => "United Kingdom"} United Kingdom
+                %option{:value => "Afghanistan"} Afghanistan
+                %option{:value => "Aland Islands"} Aland Islands
+                %option{:value => "Albania"} Albania
+                %option{:value => "Algeria"} Algeria
+                %option{:value => "American Samoa"} American Samoa
+                %option{:value => "Andorra"} Andorra
+                %option{:value => "Angola"} Angola
+                %option{:value => "Anguilla"} Anguilla
+                %option{:value => "Antarctica"} Antarctica
+                %option{:value => "Antigua and Barbuda"} Antigua and Barbuda
+                %option{:value => "Argentina"} Argentina
+                %option{:value => "Armenia"} Armenia
+                %option{:value => "Aruba"} Aruba
+                %option{:value => "Australia"} Australia
+                %option{:value => "Austria"} Austria
+                %option{:value => "Azerbaijan"} Azerbaijan
+                %option{:value => "Bahamas"} Bahamas
+                %option{:value => "Bahrain"} Bahrain
+                %option{:value => "Bangladesh"} Bangladesh
+                %option{:value => "Barbados"} Barbados
+                %option{:value => "Belarus"} Belarus
+                %option{:value => "Belgium"} Belgium
+                %option{:value => "Belize"} Belize
+                %option{:value => "Benin"} Benin
+                %option{:value => "Bermuda"} Bermuda
+                %option{:value => "Bhutan"} Bhutan
+                %option{:value => "Bolivia, Plurinational State of"} Bolivia, Plurinational State of
+                %option{:value => "Bonaire, Sint Eustatius and Saba"} Bonaire, Sint Eustatius and Saba
+                %option{:value => "Bosnia and Herzegovina"} Bosnia and Herzegovina
+                %option{:value => "Botswana"} Botswana
+                %option{:value => "Bouvet Island"} Bouvet Island
+                %option{:value => "Brazil"} Brazil
+                %option{:value => "British Indian Ocean Territory"} British Indian Ocean Territory
+                %option{:value => "Brunei Darussalam"} Brunei Darussalam
+                %option{:value => "Bulgaria"} Bulgaria
+                %option{:value => "Burkina Faso"} Burkina Faso
+                %option{:value => "Burundi"} Burundi
+                %option{:value => "Cambodia"} Cambodia
+                %option{:value => "Cameroon"} Cameroon
+                %option{:value => "Canada"} Canada
+                %option{:value => "Cape Verde"} Cape Verde
+                %option{:value => "Cayman Islands"} Cayman Islands
+                %option{:value => "Central African Republic"} Central African Republic
+                %option{:value => "Chad"} Chad
+                %option{:value => "Chile"} Chile
+                %option{:value => "China"} China
+                %option{:value => "Christmas Island"} Christmas Island
+                %option{:value => "Cocos (Keeling) Islands"} Cocos (Keeling) Islands
+                %option{:value => "Colombia"} Colombia
+                %option{:value => "Comoros"} Comoros
+                %option{:value => "Congo"} Congo
+                %option{:value => "Congo, The Democratic Republic of The"} Congo, The Democratic Republic of The
+                %option{:value => "Cook Islands"} Cook Islands
+                %option{:value => "Costa Rica"} Costa Rica
+                %option{:value => "Cote D'ivoire"} Cote D'ivoire
+                %option{:value => "Croatia"} Croatia
+                %option{:value => "Cuba"} Cuba
+                %option{:value => "Curacao"} Curacao
+                %option{:value => "Cyprus"} Cyprus
+                %option{:value => "Czech Republic"} Czech Republic
+                %option{:value => "Denmark"} Denmark
+                %option{:value => "Djibouti"} Djibouti
+                %option{:value => "Dominica"} Dominica
+                %option{:value => "Dominican Republic"} Dominican Republic
+                %option{:value => "Ecuador"} Ecuador
+                %option{:value => "Egypt"} Egypt
+                %option{:value => "El Salvador"} El Salvador
+                %option{:value => "Equatorial Guinea"} Equatorial Guinea
+                %option{:value => "Eritrea"} Eritrea
+                %option{:value => "Estonia"} Estonia
+                %option{:value => "Ethiopia"} Ethiopia
+                %option{:value => "Falkland Islands (Malvinas)"} Falkland Islands (Malvinas)
+                %option{:value => "Faroe Islands"} Faroe Islands
+                %option{:value => "Fiji"} Fiji
+                %option{:value => "Finland"} Finland
+                %option{:value => "France"} France
+                %option{:value => "French Guiana"} French Guiana
+                %option{:value => "French Polynesia"} French Polynesia
+                %option{:value => "French Southern Territories"} French Southern Territories
+                %option{:value => "Gabon"} Gabon
+                %option{:value => "Gambia"} Gambia
+                %option{:value => "Georgia"} Georgia
+                %option{:value => "Germany"} Germany
+                %option{:value => "Ghana"} Ghana
+                %option{:value => "Gibraltar"} Gibraltar
+                %option{:value => "Greece"} Greece
+                %option{:value => "Greenland"} Greenland
+                %option{:value => "Grenada"} Grenada
+                %option{:value => "Guadeloupe"} Guadeloupe
+                %option{:value => "Guam"} Guam
+                %option{:value => "Guatemala"} Guatemala
+                %option{:value => "Guernsey"} Guernsey
+                %option{:value => "Guinea"} Guinea
+                %option{:value => "Guinea-bissau"} Guinea-bissau
+                %option{:value => "Guyana"} Guyana
+                %option{:value => "Haiti"} Haiti
+                %option{:value => "Heard Island and Mcdonald Islands"} Heard Island and Mcdonald Islands
+                %option{:value => "Holy See (Vatican City State)"} Holy See (Vatican City State)
+                %option{:value => "Honduras"} Honduras
+                %option{:value => "Hong Kong"} Hong Kong
+                %option{:value => "Hungary"} Hungary
+                %option{:value => "Iceland"} Iceland
+                %option{:selected => "selected", :value => "India"} India
+                %option{:value => "Indonesia"} Indonesia
+                %option{:value => "Iran, Islamic Republic of"} Iran, Islamic Republic of
+                %option{:value => "Iraq"} Iraq
+                %option{:value => "Ireland"} Ireland
+                %option{:value => "Isle of Man"} Isle of Man
+                %option{:value => "Israel"} Israel
+                %option{:value => "Italy"} Italy
+                %option{:value => "Jamaica"} Jamaica
+                %option{:value => "Japan"} Japan
+                %option{:value => "Jersey"} Jersey
+                %option{:value => "Jordan"} Jordan
+                %option{:value => "Kazakhstan"} Kazakhstan
+                %option{:value => "Kenya"} Kenya
+                %option{:value => "Kiribati"} Kiribati
+                %option{:value => "Korea, Democratic People's Republic of"} Korea, Democratic People's Republic of
+                %option{:value => "Korea, Republic of"} Korea, Republic of
+                %option{:value => "Kuwait"} Kuwait
+                %option{:value => "Kyrgyzstan"} Kyrgyzstan
+                %option{:value => "Lao People's Democratic Republic"} Lao People's Democratic Republic
+                %option{:value => "Latvia"} Latvia
+                %option{:value => "Lebanon"} Lebanon
+                %option{:value => "Lesotho"} Lesotho
+                %option{:value => "Liberia"} Liberia
+                %option{:value => "Libya"} Libya
+                %option{:value => "Liechtenstein"} Liechtenstein
+                %option{:value => "Lithuania"} Lithuania
+                %option{:value => "Luxembourg"} Luxembourg
+                %option{:value => "Macao"} Macao
+                %option{:value => "Macedonia, The Former Yugoslav Republic of"} Macedonia, The Former Yugoslav Republic of
+                %option{:value => "Madagascar"} Madagascar
+                %option{:value => "Malawi"} Malawi
+                %option{:value => "Malaysia"} Malaysia
+                %option{:value => "Maldives"} Maldives
+                %option{:value => "Mali"} Mali
+                %option{:value => "Malta"} Malta
+                %option{:value => "Marshall Islands"} Marshall Islands
+                %option{:value => "Martinique"} Martinique
+                %option{:value => "Mauritania"} Mauritania
+                %option{:value => "Mauritius"} Mauritius
+                %option{:value => "Mayotte"} Mayotte
+                %option{:value => "Mexico"} Mexico
+                %option{:value => "Micronesia, Federated States of"} Micronesia, Federated States of
+                %option{:value => "Moldova, Republic of"} Moldova, Republic of
+                %option{:value => "Monaco"} Monaco
+                %option{:value => "Mongolia"} Mongolia
+                %option{:value => "Montenegro"} Montenegro
+                %option{:value => "Montserrat"} Montserrat
+                %option{:value => "Morocco"} Morocco
+                %option{:value => "Mozambique"} Mozambique
+                %option{:value => "Myanmar"} Myanmar
+                %option{:value => "Namibia"} Namibia
+                %option{:value => "Nauru"} Nauru
+                %option{:value => "Nepal"} Nepal
+                %option{:value => "Netherlands"} Netherlands
+                %option{:value => "New Caledonia"} New Caledonia
+                %option{:value => "New Zealand"} New Zealand
+                %option{:value => "Nicaragua"} Nicaragua
+                %option{:value => "Niger"} Niger
+                %option{:value => "Nigeria"} Nigeria
+                %option{:value => "Niue"} Niue
+                %option{:value => "Norfolk Island"} Norfolk Island
+                %option{:value => "Northern Mariana Islands"} Northern Mariana Islands
+                %option{:value => "Norway"} Norway
+                %option{:value => "Oman"} Oman
+                %option{:value => "Pakistan"} Pakistan
+                %option{:value => "Palau"} Palau
+                %option{:value => "Palestinian Territory, Occupied"} Palestinian Territory, Occupied
+                %option{:value => "Panama"} Panama
+                %option{:value => "Papua New Guinea"} Papua New Guinea
+                %option{:value => "Paraguay"} Paraguay
+                %option{:selected => "selected", :value => "Peru"} Peru
+                %option{:value => "Philippines"} Philippines
+                %option{:value => "Pitcairn"} Pitcairn
+                %option{:value => "Poland"} Poland
+                %option{:value => "Portugal"} Portugal
+                %option{:value => "Puerto Rico"} Puerto Rico
+                %option{:value => "Qatar"} Qatar
+                %option{:value => "Reunion"} Reunion
+                %option{:value => "Romania"} Romania
+                %option{:value => "Russian Federation"} Russian Federation
+                %option{:value => "Rwanda"} Rwanda
+                %option{:value => "Saint Barthelemy"} Saint Barthelemy
+                %option{:value => "Saint Helena, Ascension and Tristan da Cunha"} Saint Helena, Ascension and Tristan da Cunha
+                %option{:value => "Saint Kitts and Nevis"} Saint Kitts and Nevis
+                %option{:value => "Saint Lucia"} Saint Lucia
+                %option{:value => "Saint Martin (French part)"} Saint Martin (French part)
+                %option{:value => "Saint Pierre and Miquelon"} Saint Pierre and Miquelon
+                %option{:value => "Saint Vincent and The Grenadines"} Saint Vincent and The Grenadines
+                %option{:value => "Samoa"} Samoa
+                %option{:value => "San Marino"} San Marino
+                %option{:value => "Sao Tome and Principe"} Sao Tome and Principe
+                %option{:value => "Saudi Arabia"} Saudi Arabia
+                %option{:value => "Senegal"} Senegal
+                %option{:value => "Serbia"} Serbia
+                %option{:value => "Seychelles"} Seychelles
+                %option{:value => "Sierra Leone"} Sierra Leone
+                %option{:value => "Singapore"} Singapore
+                %option{:value => "Sint Maarten (Dutch part)"} Sint Maarten (Dutch part)
+                %option{:value => "Slovakia"} Slovakia
+                %option{:value => "Slovenia"} Slovenia
+                %option{:value => "Solomon Islands"} Solomon Islands
+                %option{:value => "Somalia"} Somalia
+                %option{:value => "South Africa"} South Africa
+                %option{:value => "South Georgia and The South Sandwich Islands"} South Georgia and The South Sandwich Islands
+                %option{:value => "South Sudan"} South Sudan
+                %option{:value => "Spain"} Spain
+                %option{:value => "Sri Lanka"} Sri Lanka
+                %option{:value => "Sudan"} Sudan
+                %option{:value => "Suriname"} Suriname
+                %option{:value => "Svalbard and Jan Mayen"} Svalbard and Jan Mayen
+                %option{:value => "Swaziland"} Swaziland
+                %option{:value => "Sweden"} Sweden
+                %option{:value => "Switzerland"} Switzerland
+                %option{:value => "Syrian Arab Republic"} Syrian Arab Republic
+                %option{:value => "Taiwan, Province of China"} Taiwan, Province of China
+                %option{:value => "Tajikistan"} Tajikistan
+                %option{:value => "Tanzania, United Republic of"} Tanzania, United Republic of
+                %option{:value => "Thailand"} Thailand
+                %option{:value => "Timor-leste"} Timor-leste
+                %option{:value => "Togo"} Togo
+                %option{:value => "Tokelau"} Tokelau
+                %option{:value => "Tonga"} Tonga
+                %option{:value => "Trinidad and Tobago"} Trinidad and Tobago
+                %option{:value => "Tunisia"} Tunisia
+                %option{:value => "Turkey"} Turkey
+                %option{:value => "Turkmenistan"} Turkmenistan
+                %option{:value => "Turks and Caicos Islands"} Turks and Caicos Islands
+                %option{:value => "Tuvalu"} Tuvalu
+                %option{:value => "Uganda"} Uganda
+                %option{:value => "Ukraine"} Ukraine
+                %option{:value => "United Arab Emirates"} United Arab Emirates
+                %option{:value => "United Kingdom"} United Kingdom
+                %option{:value => "United States"} United States
+                %option{:value => "United States Minor Outlying Islands"} United States Minor Outlying Islands
+                %option{:value => "Uruguay"} Uruguay
+                %option{:value => "Uzbekistan"} Uzbekistan
+                %option{:value => "Vanuatu"} Vanuatu
+                %option{:value => "Venezuela, Bolivarian Republic of"} Venezuela, Bolivarian Republic of
+                %option{:value => "Viet Nam"} Viet Nam
+                %option{:value => "Virgin Islands, British"} Virgin Islands, British
+                %option{:value => "Virgin Islands, U.S."} Virgin Islands, U.S.
+                %option{:value => "Wallis and Futuna"} Wallis and Futuna
+                %option{:value => "Western Sahara"} Western Sahara
+                %option{:value => "Yemen"} Yemen
+                %option{:value => "Zambia"} Zambia
+                %option{:value => "Zimbabwe"} Zimbabwe
+    .col-lg-7
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Range Slider
+            %small https://github.com/IonDen/ion.rangeSlider
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Sliders
+          %p
+            Are perfect for range select option.
+          .m-b-sm
+            %small
+              %strong Example of:
+              Set diapason from 0 to 5000, Adding postfix "+" to max value, Set slider type to double, Dollar symbol as prefix, Enable grid
+          #ionrange_1
+          .m-b-sm.m-t
+            %small
+              %strong Example of:
+              Set diapason from 0 to 10, Set fractional step value: 0.1, Enable grid
+          #ionrange_2
+          .m-b-sm.m-t
+            %small
+              %strong Example of:
+              Set diapason from -50 to +50, Set FROM value to 0, Add degree symbol as postfix
+          #ionrange_3
+          .m-b-sm.m-t
+            %small
+              %strong> Example of:
+              Change common slider numbers to custom (Month names). Using values array for that. Array can be any length, Slider will change min and max number automaticaly to fit values array length, Step parameter also will be changed to one, to allow to choose items in values array
+          #ionrange_4
+          %div
+            %a.btn.btn-white.pull-right.btn-sm{:href => "https://github.com/IonDen/ion.rangeSlider", :target => "_blank"} Read about API
+            .clearfix
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5
+            TouchSpin
+            %small http://www.virtuosoft.eu/code/bootstrap-touchspin/
+        .ibox-content
+          %p
+            A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.
+          .row
+            .col-md-4
+              %p.font-bold
+                Basic example with empty value
+              %input.touchspin1{:name => "demo1", :type => "text", :value => ""}/
+            .col-md-4
+              %p.font-bold
+                Example with postfix
+              %input.touchspin2{:name => "demo2", :type => "text", :value => "55"}/
+            .col-md-4
+              %p.font-bold
+                Example with vertical button alignment:
+              %input.touchspin3{:name => "demo3", :type => "text", :value => ""}/
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5
+            Select2
+            %small https://select2.github.io/
+        .ibox-content
+          .row
+            .col-md-4
+              %p
+                Select2 is a jQuery based replacement for select boxes. It can take a regular select box and turn it into:
+              %select.select2_demo_1.form-control
+                %option{:value => "1"} Option 1
+                %option{:value => "2"} Option 2
+                %option{:value => "3"} Option 3
+                %option{:value => "4"} Option 4
+                %option{:value => "5"} Option 5
+            .col-md-4
+              %p
+                A placeholder value can be defined and will be displayed until a selection is made.
+              %select.select2_demo_3.form-control
+                %option
+                %option{:value => "Bahamas"} Bahamas
+                %option{:value => "Bahrain"} Bahrain
+                %option{:value => "Bangladesh"} Bangladesh
+                %option{:value => "Barbados"} Barbados
+                %option{:value => "Belarus"} Belarus
+                %option{:value => "Belgium"} Belgium
+                %option{:value => "Belize"} Belize
+                %option{:value => "Benin"} Benin
+            .col-md-4
+              %p
+                Select2 also supports multi-value select boxes. The select below is declared with the multiple attribute.
+              %select.select2_demo_2.form-control{:multiple => "multiple"}
+                %option{:value => "Mayotte"} Mayotte
+                %option{:value => "Mexico"} Mexico
+                %option{:value => "Micronesia, Federated States of"} Micronesia, Federated States of
+                %option{:value => "Moldova, Republic of"} Moldova, Republic of
+                %option{:value => "Monaco"} Monaco
+                %option{:value => "Mongolia"} Mongolia
+                %option{:value => "Montenegro"} Montenegro
+                %option{:value => "Montserrat"} Montserrat
+                %option{:value => "Morocco"} Morocco
+                %option{:value => "Mozambique"} Mozambique
+                %option{:value => "Myanmar"} Myanmar
+                %option{:value => "Namibia"} Namibia
+                %option{:value => "Nauru"} Nauru
+                %option{:value => "Nepal"} Nepal
+                %option{:value => "Netherlands"} Netherlands
+                %option{:value => "New Caledonia"} New Caledonia
+                %option{:value => "New Zealand"} New Zealand
+                %option{:value => "Nicaragua"} Nicaragua
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Range Slider
+            %small http://refreshless.com/nouislider/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Range Slider
+          %p
+            Simple and clean range select slider.
+          .row.m-b-lg
+            .col-lg-12
+              #drag-fixed.slider_red
+          .row
+            .col-lg-6
+              %p.font-bold Basic example
+              #basic_slider
+            .col-lg-6
+              %p.font-bold Range select example
+              #range_slider
+  .row
+    .col-lg-5
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Data Picker
+            %small https://github.com/eternicode/bootstrap-datepicker
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Data picker
+          %p
+            Simple and easy select a time for a text input using your mouse.
+          #data_1.form-group
+            %label.font-noraml Simple data input format
+            .input-group.date
+              %span.input-group-addon
+                %i.fa.fa-calendar
+              %input.form-control{:type => "text", :value => "03/04/2014"}/
+          #data_2.form-group
+            %label.font-noraml One Year view
+            .input-group.date
+              %span.input-group-addon
+                %i.fa.fa-calendar
+              %input.form-control{:type => "text", :value => "08/09/2014"}/
+          #data_3.form-group
+            %label.font-noraml Decade view
+            .input-group.date
+              %span.input-group-addon
+                %i.fa.fa-calendar
+              %input.form-control{:type => "text", :value => "10/11/2013"}/
+          #data_4.form-group
+            %label.font-noraml Month select
+            .input-group.date
+              %span.input-group-addon
+                %i.fa.fa-calendar
+              %input.form-control{:type => "text", :value => "07/01/2014"}/
+          #data_5.form-group
+            %label.font-noraml Range select
+            #datepicker.input-daterange.input-group
+              %input.input-sm.form-control{:name => "start", :type => "text", :value => "05/14/2014"}/
+              %span.input-group-addon to
+              %input.input-sm.form-control{:name => "end", :type => "text", :value => "05/22/2014"}/
+      .ibox
+        .ibox-title
+          %h5
+            ClockPicker
+            %small http://weareoutman.github.io/clockpicker/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            ClockPicker
+          %p
+            A clock-style timepicker for Bootstrap (or jQuery).
+          .input-group.clockpicker{"data-autoclose" => "true"}
+            %input.form-control{:type => "text", :value => "09:30"}/
+            %span.input-group-addon
+              %span.fa.fa-clock-o
+      .ibox
+        .ibox-title
+          %h5
+            Date Range Picker
+            %small http://www.daterangepicker.com/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Date Range Picker
+          %p
+            A JavaScript widget for choosing date ranges.
+            Designed to work with the Bootstrap CSS framework.
+          %h4 Minimal example
+          %p
+            The Date Range Picker is attached to a text input. It will use the current value of the input to initialize, and update the input if new dates are chosen.
+          %input.form-control{:name => "daterange", :type => "text", :value => "01/01/2015 - 01/31/2015"}/
+          %h4 All options example
+          #reportrange.form-control
+            %i.fa.fa-calendar
+            %span
+            %b.caret
+      .ibox.float-e-margins
+        .ibox-title.back-change
+          %h5
+            Color picker
+            %small http://mjolnic.github.io/bootstrap-colorpicker/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Colorpicker
+          %p
+            Colorpicker plugin for the Twitter Bootstrap toolkit.
+          %h5 As normal input
+          %input.form-control.demo1{:type => "text", :value => "#5367ce"}/
+          %h5 As a link
+          %a#demo_apidemo.btn.small.demo.colorpicker-element{"data-color" => "rgb(255, 255, 255)", :href => "#"} Change background color
+          %br/
+    .col-lg-7
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Input Mask
+            %small http://jasny.github.io/bootstrap/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Input Mask
+          %p
+            Input masks allows a user to more easily enter data where you would like them to enter the data in a certain format.
+          %form.form-horizontal.m-t-md{:action => "#"}
+            .form-group
+              %label.col-sm-2.col-sm-2.control-label ISBN 1
+              .col-sm-10
+                %input.form-control{"data-mask" => "999-99-999-9999-9", :placeholder => "", :type => "text"}/
+                %span.help-block 999-99-999-9999-9
+            .form-group
+              %label.col-sm-2.control-label ISBN 2
+              .col-sm-10
+                %input.form-control{"data-mask" => "999 99 999 9999 9", :placeholder => "", :type => "text"}/
+                %span.help-block 999 99 999 9999 9
+            .form-group
+              %label.col-sm-2.control-label ISBN 3
+              .col-sm-10
+                %input.form-control{"data-mask" => "999/99/999/9999/9", :placeholder => "", :type => "text"}/
+                %span.help-block 999/99/999/9999/9
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label IPV4
+              .col-sm-10
+                %input.form-control{"data-mask" => "999.999.999.9999", :placeholder => "", :type => "text"}/
+                %span.help-block 192.168.100.200
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Tax ID
+              .col-sm-10
+                %input.form-control{"data-mask" => "99-9999999", :placeholder => "", :type => "text"}/
+                %span.help-block 99-9999999
+            .form-group
+              %label.col-sm-2.control-label Phone
+              .col-sm-10
+                %input.form-control{"data-mask" => "(999) 999-9999", :placeholder => "", :type => "text"}/
+                %span.help-block (999) 999-9999
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Currency
+              .col-sm-10
+                %input.form-control{"data-mask" => "$ 999,999,999.99", :placeholder => "", :type => "text"}/
+                %span.help-block $ 999,999,999.99
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Date
+              .col-sm-10
+                %input.form-control{"data-mask" => "99/99/9999", :placeholder => "", :type => "text"}/
+                %span.help-block dd/mm/yyyy
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Switcher
+            %small http://abpetkov.github.io/switchery/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h3
+            Switcher
+          %p
+            Is iOS 7 style switches for your checkboxes.
+          %input.js-switch{:checked => "checked", :type => "checkbox"}/
+          %input.js-switch_2{:checked => "checked", :type => "checkbox"}/
+          %br/
+          %br/
+          %input.js-switch_3{:type => "checkbox"}/
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Custom switch
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h4
+            Custom switch
+          %p
+            Pure CSS3 On/Off flipswitches with animated transitions.
+          .switch
+            .onoffswitch
+              %input#example1.onoffswitch-checkbox{:checked => "checked", :type => "checkbox"}/
+              %label.onoffswitch-label{:for => "example1"}
+                %span.onoffswitch-inner
+                %span.onoffswitch-switch
+          .switch
+            .onoffswitch
+              %input#example2.onoffswitch-checkbox{:type => "checkbox"}/
+              %label.onoffswitch-label{:for => "example2"}
+                %span.onoffswitch-inner
+                %span.onoffswitch-switch
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title.back-change
+          %h5
+            Image cropper
+            %small http://fengyuanchen.github.io/cropper/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            A simple jQuery image cropping plugin.
+          .row
+            .col-md-6
+              .image-crop
+                %img{:src => "#{image_path('p3.jpg')}"}/
+            .col-md-6
+              %h4 Preview image
+              .img-preview.img-preview-sm
+              %h4 Comon method
+              %p
+                You can upload new image to crop container and easy download new cropped image.
+              .btn-group
+                %label.btn.btn-primary{:for => "inputImage", :title => "Upload image file"}
+                  %input#inputImage.hide{:accept => "image/*", :name => "file", :type => "file"}/
+                  Upload new image
+                %label#download.btn.btn-primary{:title => "Donload image"} Download
+              %h4 Other method
+              %p
+                You may set cropper options with
+                %code $({image}).cropper(options)
+              .btn-group
+                %button#zoomIn.btn.btn-white{:type => "button"} Zoom In
+                %button#zoomOut.btn.btn-white{:type => "button"} Zoom Out
+                %button#rotateLeft.btn.btn-white{:type => "button"} Rotate Left
+                %button#rotateRight.btn.btn-white{:type => "button"} Rotate Right
+                %button#setDrag.btn.btn-warning{:type => "button"} New crop
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title.back-change
+          %h5 Awesome bootstrap checkbox
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          .row
+            .col-md-4
+              %fieldset
+                %h3
+                  Basic
+                %p
+                  Supports bootstrap brand colors:
+                  = succeed "," do
+                    %code .checkbox-primary
+                  %code .checkbox-info
+                  etc.
+                .checkbox
+                  %input#checkbox1{:type => "checkbox"}/
+                  %label{:for => "checkbox1"}
+                    Default
+                .checkbox.checkbox-primary
+                  %input#checkbox2{:checked => "checked", :type => "checkbox"}/
+                  %label{:for => "checkbox2"}
+                    Primary
+                .checkbox.checkbox-success
+                  %input#checkbox3{:type => "checkbox"}/
+                  %label{:for => "checkbox3"}
+                    Success
+                .checkbox.checkbox-info
+                  %input#checkbox4{:type => "checkbox"}/
+                  %label{:for => "checkbox4"}
+                    Info
+                .checkbox.checkbox-warning
+                  %input#checkbox5{:checked => "checked", :type => "checkbox"}/
+                  %label{:for => "checkbox5"}
+                    Warning
+                .checkbox.checkbox-danger
+                  %input#checkbox6{:checked => "checked", :type => "checkbox"}/
+                  %label{:for => "checkbox6"}
+                    Check me out
+                %p Checkboxes without label text
+                .checkbox
+                  %input#singleCheckbox1{"aria-label" => "Single checkbox One", :type => "checkbox", :value => "option1"}/
+                  %label
+                .checkbox.checkbox-primary
+                  %input#singleCheckbox2{"aria-label" => "Single checkbox Two", :checked => "checked", :type => "checkbox", :value => "option2"}/
+                  %label
+                %p Inline checkboxes
+                .checkbox.checkbox-inline
+                  %input#inlineCheckbox1{:type => "checkbox", :value => "option1"}/
+                  %label{:for => "inlineCheckbox1"} Inline One
+                .checkbox.checkbox-success.checkbox-inline
+                  %input#inlineCheckbox2{:checked => "checked", :type => "checkbox", :value => "option1"}/
+                  %label{:for => "inlineCheckbox2"} Inline Two
+                .checkbox.checkbox-inline
+                  %input#inlineCheckbox3{:type => "checkbox", :value => "option1"}/
+                  %label{:for => "inlineCheckbox3"} Inline Three
+            .col-md-4
+              %fieldset
+                %h3
+                  Circled
+                %p
+                  %code .checkbox-circle
+                  for roundness.
+                .checkbox.checkbox-circle
+                  %input#checkbox7{:type => "checkbox"}/
+                  %label{:for => "checkbox7"}
+                    Simply Rounded
+                .checkbox.checkbox-info.checkbox-circle
+                  %input#checkbox8{:checked => "checked", :type => "checkbox"}/
+                  %label{:for => "checkbox8"}
+                    Me too
+            .col-md-4
+              %fieldset
+                %h3
+                  Radio
+                %p
+                  Supports bootstrap brand colors:
+                  = succeed "," do
+                    %code .radio-primary
+                  %code .radio-danger
+                  etc.
+                .row
+                  .col-sm-6
+                    .radio
+                      %input#radio1{:checked => "checked", :name => "radio1", :type => "radio", :value => "option1"}/
+                      %label{:for => "radio1"}
+                        Small
+                    .radio
+                      %input#radio2{:name => "radio1", :type => "radio", :value => "option2"}/
+                      %label{:for => "radio2"}
+                        Big
+                  .col-sm-6
+                    .radio.radio-danger
+                      %input#radio3{:name => "radio2", :type => "radio", :value => "option1"}/
+                      %label{:for => "radio3"}
+                        Next
+                    .radio.radio-danger
+                      %input#radio4{:checked => "checked", :name => "radio2", :type => "radio", :value => "option2"}/
+                      %label{:for => "radio4"}
+                        One
+                %p Radios without label text
+                .radio
+                  %input#singleRadio1{"aria-label" => "Single radio One", :name => "radioSingle1", :type => "radio", :value => "option1"}/
+                  %label
+                .radio.radio-success
+                  %input#singleRadio2{"aria-label" => "Single radio Two", :checked => "checked", :name => "radioSingle1", :type => "radio", :value => "option2"}/
+                  %label
+                %p Inline radios
+                .radio.radio-info.radio-inline
+                  %input#inlineRadio1{:checked => "checked", :name => "radioInline", :type => "radio", :value => "option1"}/
+                  %label{:for => "inlineRadio1"} Inline One
+                .radio.radio-inline
+                  %input#inlineRadio2{:name => "radioInline", :type => "radio", :value => "option2"}/
+                  %label{:for => "inlineRadio2"} Inline Two
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        var $image = $(".image-crop > img")
+        $($image).cropper({
+            aspectRatio: 1.618,
+            preview: ".img-preview",
+            done: function (data) {
+                // Output the result data for cropping image.
+            }
+        });
+    
+        var $inputImage = $("#inputImage");
+        if (window.FileReader) {
+            $inputImage.change(function () {
+                var fileReader = new FileReader(),
+                        files = this.files,
+                        file;
+    
+                if (!files.length) {
+                    return;
+                }
+    
+                file = files[0];
+    
+                if (/^image\/\w+$/.test(file.type)) {
+                    fileReader.readAsDataURL(file);
+                    fileReader.onload = function () {
+                        $inputImage.val("");
+                        $image.cropper("reset", true).cropper("replace", this.result);
+                    };
+                } else {
+                    showMessage("Please choose an image file.");
+                }
+            });
+        } else {
+            $inputImage.addClass("hide");
+        }
+    
+        $("#download").click(function () {
+            window.open($image.cropper("getDataURL"));
+        });
+    
+        $("#zoomIn").click(function () {
+            $image.cropper("zoom", 0.1);
+        });
+    
+        $("#zoomOut").click(function () {
+            $image.cropper("zoom", -0.1);
+        });
+    
+        $("#rotateLeft").click(function () {
+            $image.cropper("rotate", 45);
+        });
+    
+        $("#rotateRight").click(function () {
+            $image.cropper("rotate", -45);
+        });
+    
+        $("#setDrag").click(function () {
+            $image.cropper("setDragMode", "crop");
+        });
+    
+        $('#data_1 .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+    
+        $('#data_2 .input-group.date').datepicker({
+            startView: 1,
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+    
+        $('#data_3 .input-group.date').datepicker({
+            startView: 2,
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+    
+        $('#data_4 .input-group.date').datepicker({
+            minViewMode: 1,
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true,
+            todayHighlight: true
+        });
+    
+        $('#data_5 .input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+    
+        var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, { color: '#1AB394' });
+    
+        var elem_2 = document.querySelector('.js-switch_2');
+        var switchery_2 = new Switchery(elem_2, { color: '#ED5565' });
+    
+        var elem_3 = document.querySelector('.js-switch_3');
+        var switchery_3 = new Switchery(elem_3, { color: '#1AB394' });
+    
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    
+        $('.demo1').colorpicker();
+    
+        var divStyle = $('.back-change')[0].style;
+        $('#demo_apidemo').colorpicker({
+            color: divStyle.backgroundColor
+        }).on('changeColor', function (ev) {
+                    divStyle.backgroundColor = ev.color.toHex();
+                });
+    
+        var config = {
+            '.chosen-select': {},
+            '.chosen-select-deselect': { allow_single_deselect: true },
+            '.chosen-select-no-single': { disable_search_threshold: 10 },
+            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+            '.chosen-select-width': { width: "95%" }
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+    
+        $(".select2_demo_1").select2();
+        $(".select2_demo_2").select2();
+        $(".select2_demo_3").select2({
+            placeholder: "Select a state",
+            allowClear: true
+        });
+    
+        $(".touchspin1").TouchSpin({
+            buttondown_class: 'btn btn-white',
+            buttonup_class: 'btn btn-white'
+        });
+    
+        $(".touchspin2").TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%',
+            buttondown_class: 'btn btn-white',
+            buttonup_class: 'btn btn-white'
+        });
+    
+        $(".touchspin3").TouchSpin({
+            verticalbuttons: true,
+            buttondown_class: 'btn btn-white',
+            buttonup_class: 'btn btn-white'
+        });
+    
+        $("#ionrange_1").ionRangeSlider({
+            min: 0,
+            max: 5000,
+            type: 'double',
+            prefix: "$",
+            maxPostfix: "+",
+            prettify: false,
+            hasGrid: true
+        });
+    
+        $("#ionrange_2").ionRangeSlider({
+            min: 0,
+            max: 10,
+            type: 'single',
+            step: 0.1,
+            postfix: " carats",
+            prettify: false,
+            hasGrid: true
+        });
+    
+        $("#ionrange_3").ionRangeSlider({
+            min: -50,
+            max: 50,
+            from: 0,
+            postfix: "°",
+            prettify: false,
+            hasGrid: true
+        });
+    
+        $("#ionrange_4").ionRangeSlider({
+            values: [
+                "January", "February", "March",
+                "April", "May", "June",
+                "July", "August", "September",
+                "October", "November", "December"
+            ],
+            type: 'single',
+            hasGrid: true
+        });
+    
+        $("#ionrange_5").ionRangeSlider({
+            min: 10000,
+            max: 100000,
+            step: 100,
+            postfix: " km",
+            from: 55000,
+            hideMinMax: true,
+            hideFromTo: false
+        });
+    
+        $(".dial").knob();
+    
+        $("#basic_slider").noUiSlider({
+            start: 40,
+            behaviour: 'tap',
+            connect: 'upper',
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+    
+        $("#range_slider").noUiSlider({
+            start: [40, 60],
+            behaviour: 'drag',
+            connect: true,
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+    
+        $("#drag-fixed").noUiSlider({
+            start: [40, 60],
+            behaviour: 'drag-fixed',
+            connect: true,
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+    
+        $('.clockpicker').clockpicker();
+    
+        $('input[name="daterange"]').daterangepicker();
+    
+        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    
+        $('#reportrange').daterangepicker({
+            format: 'MM/DD/YYYY',
+            startDate: moment().subtract(29, 'days'),
+            endDate: moment(),
+            minDate: '01/01/2012',
+            maxDate: '12/31/2015',
+            dateLimit: { days: 60 },
+            showDropdowns: true,
+            showWeekNumbers: true,
+            timePicker: false,
+            timePickerIncrement: 1,
+            timePicker12Hour: true,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            opens: 'right',
+            drops: 'down',
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-primary',
+            cancelClass: 'btn-default',
+            separator: ' to ',
+            locale: {
+                applyLabel: 'Submit',
+                cancelLabel: 'Cancel',
+                fromLabel: 'From',
+                toLabel: 'To',
+                customRangeLabel: 'Custom',
+                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                firstDay: 1
+            }
+        }, function(start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        });
+    
+    });

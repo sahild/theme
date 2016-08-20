@@ -1,0 +1,226 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Modal Window
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Tables
+      %li.active
+        %strong Modal Window
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-4
+      .ibox
+        .ibox-title
+          %h5 Inspinia modal window
+        .ibox-content
+          %p
+            Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
+          %p
+            To creata a custom Inspinia modal all you have to do is to add
+            %code .inmodal
+            class to html modal element.
+            Modal contains title, content and footer
+          .text-center
+            %button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+              Launch demo modal
+          #myModal.modal.inmodal{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog
+              .modal-content.animated.bounceInRight
+                .modal-header
+                  %button.close{"data-dismiss" => "modal", :type => "button"}
+                    %span{"aria-hidden" => "true"} ×
+                    %span.sr-only Close
+                  %i.fa.fa-laptop.modal-icon
+                  %h4.modal-title Modal title
+                  %small.font-bold Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .modal-body
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                  .form-group
+                    %label Sample Input
+                    %input.form-control{:placeholder => "Enter your email", :type => "email"}/
+                .modal-footer
+                  %button.btn.btn-white{"data-dismiss" => "modal", :type => "button"} Close
+                  %button.btn.btn-primary{:type => "button"} Save changes
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Optional sizes
+        .ibox-content
+          %p
+            Modals have two optional sizes, available via modifier classes to be placed on a
+            %code .modal-dialog
+          .text-center
+            %button.btn.btn-primary{"data-target" => "#myModal5", "data-toggle" => "modal", :type => "button"}
+              Large Modal
+            %button.btn.btn-primary{"data-target" => "#myModal6", "data-toggle" => "modal", :type => "button"}
+              Small Modal
+          #myModal5.modal.inmodal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog.modal-lg
+              .modal-content
+                .modal-header
+                  %button.close{"data-dismiss" => "modal", :type => "button"}
+                    %span{"aria-hidden" => "true"} ×
+                    %span.sr-only Close
+                  %h4.modal-title Modal title
+                  %small.font-bold Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .modal-body
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                .modal-footer
+                  %button.btn.btn-white{"data-dismiss" => "modal", :type => "button"} Close
+                  %button.btn.btn-primary{:type => "button"} Save changes
+          #myModal6.modal.inmodal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog.modal-sm
+              .modal-content
+                .modal-header
+                  %button.close{"data-dismiss" => "modal", :type => "button"}
+                    %span{"aria-hidden" => "true"} ×
+                    %span.sr-only Close
+                  %h4.modal-title Modal title
+                .modal-body
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                .modal-footer
+                  %button.btn.btn-white{"data-dismiss" => "modal", :type => "button"} Close
+                  %button.btn.btn-primary{:type => "button"} Save changes
+    .col-lg-8
+      .ibox
+        .ibox-title
+          %h5 Animation Effect
+        .ibox-content
+          %p
+            You can add any animation effect to your modal window. Just pick up some of the effect from animation page and add it to
+            %code .modal-content
+            elemente.
+          %button.btn.btn-primary{"data-target" => "#myModal2", "data-toggle" => "modal", :type => "button"}
+            FlipInY effect
+          #myModal2.modal.inmodal{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog
+              .modal-content.animated.flipInY
+                .modal-header
+                  %button.close{"data-dismiss" => "modal", :type => "button"}
+                    %span{"aria-hidden" => "true"} ×
+                    %span.sr-only Close
+                  %h4.modal-title Modal title
+                  %small.font-bold Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .modal-body
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                .modal-footer
+                  %button.btn.btn-white{"data-dismiss" => "modal", :type => "button"} Close
+                  %button.btn.btn-primary{:type => "button"} Save changes
+          %button.btn.btn-primary{"data-target" => "#myModal4", "data-toggle" => "modal", :type => "button"}
+            Basic fadeIn effect
+          #myModal4.modal.inmodal{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog
+              .modal-content.animated.fadeIn
+                .modal-header
+                  %button.close{"data-dismiss" => "modal", :type => "button"}
+                    %span{"aria-hidden" => "true"} ×
+                    %span.sr-only Close
+                  %i.fa.fa-clock-o.modal-icon
+                  %h4.modal-title Modal title
+                  %small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .modal-body
+                  %p
+                    %strong Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                .modal-footer
+                  %button.btn.btn-white{"data-dismiss" => "modal", :type => "button"} Close
+                  %button.btn.btn-primary{:type => "button"} Save changes
+      .ibox
+        .ibox-title
+          %h5 Options
+        .ibox-content
+          %p
+            Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
+            = succeed "," do
+              %code data-
+            = succeed "." do
+              %code data-backdrop=""
+          .table-responsive
+            %table.table.table-bordered.table-striped
+              %thead
+                %tr
+                  %th{:style => "width: 100px;"} Name
+                  %th{:style => "width: 50px;"} type
+                  %th{:style => "width: 50px;"} default
+                  %th description
+              %tbody
+                %tr
+                  %td backdrop
+                  %td
+                    boolean or the string
+                    %code 'static'
+                  %td true
+                  %td
+                    Includes a modal-backdrop element. Alternatively, specify
+                    %code static
+                    for a backdrop which doesn't close the modal on click.
+                %tr
+                  %td keyboard
+                  %td boolean
+                  %td true
+                  %td Closes the modal when escape key is pressed
+                %tr
+                  %td show
+                  %td boolean
+                  %td true
+                  %td Shows the modal when initialized.
+                %tr
+                  %td remote
+                  %td path
+                  %td false
+                  %td
+                    %p
+                      %strong.text-danger This option is deprecated since v3.3.0 and will be removed in v4.
+                      We recommend instead using client-side templating or a data binding framework, or calling
+                      %a{:href => "http://api.jquery.com/load/"} jQuery.load
+                      yourself.
+                    %p
+                      If a remote URL is provided,
+                      %strong content will be loaded one time
+                      via jQuery's
+                      %code load
+                      method and injected into the
+                      %code .modal-content
+                      div. If you're using the data-api, you may alternatively use the
+                      %code href
+                      attribute to specify the remote source. An example of this is shown below:
+                    .zero-clipboard
+                      %span.btn-clipboard Copy
+                    .highlight
+                      %pre
+                        %code.language-html{"data-lang" => "html"}
+                          %span.nt &lt;a
+                          %span.na data-toggle=
+                          %span.s "modal"
+                          %span.na href=
+                          %span.s "remote.html"
+                          %span.na data-target=
+                          %span.s "#modal"
+                          = succeed "Click" do
+                            %span.nt &gt;
+                          %span.nt &lt;/a&gt;

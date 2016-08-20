@@ -1,0 +1,517 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-9
+    %h2 Widgets
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li.active
+        %strong Widgets
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-3
+      .widget.style1
+        .row
+          .col-xs-4.text-center
+            %i.fa.fa-trophy.fa-5x
+          .col-xs-8.text-right
+            %span Today income
+            %h2.font-bold $ 4,232
+    .col-lg-3
+      .widget.style1.navy-bg
+        .row
+          .col-xs-4
+            %i.fa.fa-cloud.fa-5x
+          .col-xs-8.text-right
+            %span Today degrees
+            %h2.font-bold 26'C
+    .col-lg-3
+      .widget.style1.lazur-bg
+        .row
+          .col-xs-4
+            %i.fa.fa-envelope-o.fa-5x
+          .col-xs-8.text-right
+            %span New messages
+            %h2.font-bold 260
+    .col-lg-3
+      .widget.style1.yellow-bg
+        .row
+          .col-xs-4
+            %i.fa.fa-music.fa-5x
+          .col-xs-8.text-right
+            %span New albums
+            %h2.font-bold 12
+  .row
+    .col-lg-6
+      .widget.navy-bg.no-padding
+        .p-m
+          %h1.m-xs $ 1,540
+          %h3.font-bold.no-margins
+            Annual income
+          %small Income form project Alpha.
+        .flot-chart
+          #flot-chart1.flot-chart-content
+    .col-lg-3
+      .widget.lazur-bg.no-padding
+        .p-m
+          %h1.m-xs $ 210,660
+          %h3.font-bold.no-margins
+            Monthly income
+          %small Income form project Beta.
+        .flot-chart
+          #flot-chart2.flot-chart-content
+    .col-lg-3
+      .widget.yellw-bg.no-padding
+        .p-m
+          %h1.m-xs $ 50,992
+          %h3.font-bold.no-margins
+            Half-year revenue margin
+          %small Sales marketing.
+        .flot-chart
+          #flot-chart3.flot-chart-content
+  .row
+    .col-lg-2
+      .widget.style1.navy-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-user.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 217
+    .col-lg-2
+      .widget.style1.navy-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-thumbs-up.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 400
+    .col-lg-2
+      .widget.style1.navy-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-rss.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 10
+    .col-lg-2
+      .widget.style1.lazur-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-phone.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 120
+    .col-lg-2
+      .widget.style1.lazur-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-euro.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 462
+    .col-lg-2
+      .widget.style1.yellow-bg
+        .row.vertical-align
+          .col-xs-3
+            %i.fa.fa-shield.fa-3x
+          .col-xs-9.text-right
+            %h2.font-bold 610
+  .row
+    .col-lg-4
+      .widget-head-color-box.navy-bg.p-lg.text-center
+        .m-b-md
+          %h2.font-bold.no-margins
+            Alex Smith
+          %small Founder of Groupeq
+        %img.img-circle.circle-border.m-b-md{:alt => "profile", :src => "#{image_path('a4.jpg')}"}/
+        %div
+          %span 100 Tweets
+          |
+          %span 350 Following
+          |
+          %span 610 Followers
+      .widget-text-box
+        %h4.media-heading Alex Smith
+        %p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .text-right
+          %a.btn.btn-xs.btn-white
+            %i.fa.fa-thumbs-up
+            Like
+          %a.btn.btn-xs.btn-primary
+            %i.fa.fa-heart
+            Love
+    .col-lg-2
+      .widget.navy-bg.p-lg.text-center
+        .m-b-md
+          %i.fa.fa-shield.fa-4x
+          %h1.m-xs 456
+          %h3.font-bold.no-margins
+            Shield
+          %small power
+      .widget.p-lg.text-center
+        .m-b-md
+          %i.fa.fa-flash.fa-4x
+          %h1.m-xs 612
+          %h3.font-bold.no-margins
+            Thunder
+          %small amount
+    .col-lg-4
+      .widget.lazur-bg.p-xl
+        %h2
+          Janet Smith
+        %ul.list-unstyled.m-t-md
+          %li
+            %span.fa.fa-envelope.m-r-xs
+            %label Email:
+            mike@mail.com
+          %li
+            %span.fa.fa-home.m-r-xs
+            %label Address:
+            Street 200, Avenue 10
+          %li
+            %span.fa.fa-phone.m-r-xs
+            %label Contact:
+            (+121) 678 3462
+      .widget.red-bg.p-lg.text-center
+        .m-b-md
+          %i.fa.fa-bell.fa-4x
+          %h1.m-xs 47
+          %h3.font-bold.no-margins
+            Notification
+          %small We detect the error.
+    .col-lg-2
+      .widget.yellow-bg.p-lg.text-center
+        .m-b-md
+          %i.fa.fa-thumbs-up.fa-4x
+          %h1.m-xs 520
+          %h3.font-bold.no-margins
+            Likes
+          %small amount
+      .widget.yellow-bg.p-lg.text-center
+        .m-b-md
+          %i.fa.fa-warning.fa-4x
+          %h1.m-xs Alarm
+          %h3.font-bold.no-margins
+            Do
+          %small something
+  .row.m-t-lg
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-content
+          %div
+            .chat-activity-list
+              .chat-element
+                %a.pull-left{:href => "#"}
+                  %img.img-circle{:alt => "image", :src => "#{image_path('a2.jpg')}"}/
+                .media-body
+                  %small.pull-right.text-navy 1m ago
+                  %strong Mike Smith
+                  %p.m-b-xs
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                  %small.text-muted Today 4:21 pm - 12.06.2014
+              .chat-element.right
+                %a.pull-right{:href => "#"}
+                  %img.img-circle{:alt => "image", :src => "#{image_path('a4.jpg')}"}/
+                .media-body.text-right
+                  %small.pull-left 5m ago
+                  %strong John Smith
+                  %p.m-b-xs
+                    Lorem Ipsum is simply dummy text of the printing.
+                  %small.text-muted Today 4:21 pm - 12.06.2014
+              .chat-element
+                %a.pull-left{:href => "#"}
+                  %img.img-circle{:alt => "image", :src => "#{image_path('a2.jpg')}"}/
+                .media-body
+                  %small.pull-right 2h ago
+                  %strong Mike Smith
+                  %p.m-b-xs
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                  %small.text-muted Today 4:21 pm - 12.06.2014
+          .chat-form
+            %form{:role => "form"}
+              .form-group
+                %textarea.form-control{:placeholder => "Message"}
+              .text-right
+                %button.btn.btn-sm.btn-primary.m-t-n-xs{:type => "submit"}
+                  %strong Send message
+    .col-lg-6
+      %div
+        %table.table
+          %tbody
+            %tr
+              %td
+                %button.btn.btn-danger.m-r-sm{:type => "button"} 12
+                Total messages
+              %td
+                %button.btn.btn-primary.m-r-sm{:type => "button"} 28
+                Posts
+              %td
+                %button.btn.btn-info.m-r-sm{:type => "button"} 15
+                Comments
+            %tr
+              %td
+                %button.btn.btn-info.m-r-sm{:type => "button"} 20
+                News
+              %td
+                %button.btn.btn-success.m-r-sm{:type => "button"} 40
+                Likes
+              %td
+                %button.btn.btn-danger.m-r-sm{:type => "button"} 30
+                Notifications
+            %tr
+              %td
+                %button.btn.btn-warning.m-r-sm{:type => "button"} 20
+                Albums
+              %td
+                %button.btn.btn-default.m-r-sm{:type => "button"} 40
+                Groups
+              %td
+                %button.btn.btn-warning.m-r-sm{:type => "button"} 30
+                Permissions
+      %div
+        .row
+          .col-md-6
+            .ibox-content.text-center
+              %h1 Nicki Smith
+              .m-b-sm
+                %img.img-circle{:alt => "image", :src => "#{image_path('a8.jpg')}"}/
+              %p.font-bold Consectetur adipisicing
+              .text-center
+                %a.btn.btn-xs.btn-white
+                  %i.fa.fa-thumbs-up
+                  Like
+                %a.btn.btn-xs.btn-primary
+                  %i.fa.fa-heart
+                  Love
+          .col-md-6
+            .ibox-content
+              %div
+                %div
+                  %span Memory
+                  %small.pull-right 10/200 GB
+                .progress.progress-small
+                  .progress-bar{:style => "width: 60%;"}
+                %div
+                  %span Bandwidth
+                  %small.pull-right 20 GB
+                .progress.progress-small
+                  .progress-bar{:style => "width: 50%;"}
+                %div
+                  %span Activity
+                  %small.pull-right 73%
+                .progress.progress-small
+                  .progress-bar{:style => "width: 40%;"}
+                %div
+                  %span FTP
+                  %small.pull-right 400 GB
+                .progress.progress-small
+                  .progress-bar.progress-bar-danger{:style => "width: 20%;"}
+  .row
+    .col-lg-6
+      .ibox-content
+        %h2 TODO List
+        %small This is example of task list
+        %ul.todo-list.m-t
+          %li
+            %input.i-checks{:name => "", :type => "checkbox", :value => ""}/
+            %span.m-l-xs Buy a milk
+            %small.label.label-primary
+              %i.fa.fa-clock-o
+              1 mins
+          %li
+            %input.i-checks{:checked => "checked", :name => "", :type => "checkbox", :value => ""}/
+            %span.m-l-xs Go to shop and find some products.
+            %small.label.label-info
+              %i.fa.fa-clock-o
+              3 mins
+          %li
+            %input.i-checks{:name => "", :type => "checkbox", :value => ""}/
+            %span.m-l-xs Send documents to Mike
+            %small.label.label-warning
+              %i.fa.fa-clock-o
+              2 mins
+          %li
+            %input.i-checks{:name => "", :type => "checkbox", :value => ""}/
+            %span.m-l-xs Go to the doctor dr Smith
+            %small.label.label-danger
+              %i.fa.fa-clock-o
+              42 mins
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-content
+          %h2 TODO Small version
+          %small This is example of small version of todo list
+          %ul.todo-list.m-t.small-list
+            %li
+              %a.check-link{:href => "#"}
+                %i.fa.fa-check-square
+              %span.m-l-xs.todo-completed Buy a milk
+            %li
+              %a.check-link{:href => "#"}
+                %i.fa.fa-check-square
+              %span.m-l-xs.todo-completed Go to shop and find some products.
+            %li
+              %a.check-link{:href => "#"}
+                %i.fa.fa-square-o
+              %span.m-l-xs Send documents to Mike
+              %small.label.label-primary
+                %i.fa.fa-clock-o
+                1 mins
+            %li
+              %a.check-link{:href => "#"}
+                %i.fa.fa-square-o
+              %span.m-l-xs Go to the doctor dr Smith
+            %li
+              %a.check-link{:href => "#"}
+                %i.fa.fa-square-o
+              %span.m-l-xs Plan vacation
+  .row.m-t-lg
+    .col-lg-12
+      .ibox-content
+        %h2 Word map
+        %small This is simple example of map
+        #world-map{:style => "height: 300px;"}
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+        var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
+    
+        var data1 = [
+            { label: "Data 1", data: d1, color: '#17a084' },
+            { label: "Data 2", data: d2, color: '#127e68' }
+        ];
+        $.plot($("#flot-chart1"), data1, {
+            xaxis: {
+                tickDecimals: 0
+            },
+            series: {
+                lines: {
+                    show: true,
+                    fill: true,
+                    fillColor: {
+                        colors: [{
+                            opacity: 1
+                        }, {
+                            opacity: 1
+                        }]
+                    },
+                },
+                points: {
+                    width: 0.1,
+                    show: false
+                },
+            },
+            grid: {
+                show: false,
+                borderWidth: 0
+            },
+            legend: {
+                show: false,
+            }
+        });
+    
+        var data2 = [
+            { label: "Data 1", data: d1, color: '#19a0a1' }
+        ];
+        $.plot($("#flot-chart2"), data2, {
+            xaxis: {
+                tickDecimals: 0
+            },
+            series: {
+                lines: {
+                    show: true,
+                    fill: true,
+                    fillColor: {
+                        colors: [{
+                            opacity: 1
+                        }, {
+                            opacity: 1
+                        }]
+                    },
+                },
+                points: {
+                    width: 0.1,
+                    show: false
+                },
+            },
+            grid: {
+                show: false,
+                borderWidth: 0
+            },
+            legend: {
+                show: false,
+            }
+        });
+    
+        var data3 = [
+            { label: "Data 1", data: d1, color: '#fbbe7b' },
+            { label: "Data 2", data: d2, color: '#f8ac59' }
+        ];
+        $.plot($("#flot-chart3"), data3, {
+            xaxis: {
+                tickDecimals: 0
+            },
+            series: {
+                lines: {
+                    show: true,
+                    fill: true,
+                    fillColor: {
+                        colors: [{
+                            opacity: 1
+                        }, {
+                            opacity: 1
+                        }]
+                    },
+                },
+                points: {
+                    width: 0.1,
+                    show: false
+                },
+            },
+            grid: {
+                show: false,
+                borderWidth: 0
+            },
+            legend: {
+                show: false,
+            }
+        });
+    
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    
+        var mapData = {
+            "US": 498,
+            "SA": 200,
+            "CA": 1300,
+            "DE": 220,
+            "FR": 540,
+            "CN": 120,
+            "AU": 760,
+            "BR": 550,
+            "IN": 200,
+            "GB": 120,
+            "RU": 2000
+        };
+    
+        $('#world-map').vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: "transparent",
+            regionStyle: {
+                initial: {
+                    fill: '#e4e4e4',
+                    "fill-opacity": 1,
+                    stroke: 'none',
+                    "stroke-width": 0,
+                    "stroke-opacity": 0
+                }
+            },
+            series: {
+                regions: [{
+                    values: mapData,
+                    scale: ["#1ab394", "#22d6b1"],
+                    normalizeFunction: 'polynomial'
+                }]
+            },
+        });
+    
+    });

@@ -1,0 +1,69 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 File upload
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong File upload
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeIn
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Dropzone Area
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %form#my-awesome-dropzone.dropzone{:action => "#", :enctype => "multipart/form-data", :method => "post"}
+            .dropzone-previews
+            %button.btn.btn-primary.pull-right{:type => "submit"} Submit this form!
+          %div
+            .m.text-right
+              %small
+                DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews:
+                %a{:href => "https://github.com/enyo/dropzone", :target => "_blank"} https://github.com/enyo/dropzone
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        Dropzone.options.myAwesomeDropzone = {
+    
+            autoProcessQueue: false,
+            parallelUploads: 100,
+            maxFiles: 100,
+            paramName: "files",
+    
+            // Dropzone settings
+            init: function () {
+                var myDropzone = this;
+    
+                this.element.querySelector("button[type=submit]").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    myDropzone.processQueue();
+                });
+                this.on("sendingmultiple", function () {
+                });
+                this.on("successmultiple", function (files, response) {
+                });
+                this.on("errormultiple", function (files, response) {
+                });
+            }
+    
+        }
+    
+    });

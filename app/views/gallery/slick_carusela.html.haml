@@ -1,0 +1,172 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-9
+    %h2 Slick Carousel
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        UI Elements
+      %li.active
+        %strong Slick Carousel
+.wrapper.wrapper-content
+  .row
+    .col-lg-10.col-lg-offset-1
+      .ibox
+        %h4.text-center.m
+          Basic example of slick carousel
+        .slick_demo_1
+          %div
+            .ibox-content
+              %h2 Slide 1
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+          %div
+            .ibox-content
+              %h2 Slide 2
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+          %div
+            .ibox-content
+              %h2 Slide 3
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+  .row
+    .col-lg-10.col-lg-offset-1
+      %h4.text-center.m
+        Multiple example with responsive breakpoints
+      .slick_demo_2
+        %div
+          .ibox-content
+            %h2 Slide 1
+            %p
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen
+              book. It has survived not only five centuries, but also the leap.
+        %div
+          .ibox-content
+            %h2 Slide 2
+            %p
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen
+              book. It has survived not only five centuries, but also the leap.
+        %div
+          .ibox-content
+            %h2 Slide 3
+            %p
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen
+              book. It has survived not only five centuries, but also the leap.
+        %div
+          .ibox-content
+            %h2 Slide 4
+            %p
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen
+              book. It has survived not only five centuries, but also the leap.
+  .row
+    .col-lg-10.col-lg-offset-1
+      .ibox
+        %h4.text-center.m
+          Animation example with custom speed, ibox title and adoptive height
+        .ibox-title
+          Example title
+        .slick_demo_3
+          %div
+            .ibox-content
+              %h2 Slide 1
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                book. It has survived not only five centuries, but also the leap.
+          %div
+            .ibox-content
+              %h2 Slide 2
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+          %div
+            .ibox-content
+              %h2 Slide 3
+              %p
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                book. It has survived not only five centuries, but also the leap.
+/ Additional style only for demo purpose
+:css
+  .slick_demo_2 .ibox-content {
+      margin: 0 10px;
+  }
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $('.slick_demo_1').slick({
+            dots: true
+        });
+    
+        $('.slick_demo_2').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    
+        $('.slick_demo_3').slick({
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            adaptiveHeight: true
+        });
+    
+    });

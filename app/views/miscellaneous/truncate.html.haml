@@ -1,0 +1,81 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Truncate string
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Truncate string
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5 Truncate string - dotdotdot
+        .ibox-content
+          %p
+            A jQuery plugin for advanced cross-browser ellipsis on multiple line content.
+  .row
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Example container with fixed height
+        .ibox-content.fh-200
+          %p.font-bold.alert.alert-warning.m-b-sm
+            This container has fixed height with 200px. Text overflow the container.
+          %p
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Example container with fixed height
+        .ibox-content.truncate.fh-200
+          %p.font-bold.alert.alert-success.m-b-sm
+            This container has fixed height with 200px and truncate feature that prevent form overflow the text.
+          %p
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  .row
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Custom ellipsis
+        .ibox-content.truncate1.fh-150
+          %p.font-bold
+            You can also change the ellipsis
+          %p
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 You can also choose how to cut off the text
+        .ibox-content.truncate2.fh-150
+          %p.font-bold
+            Example with letter cut off
+          %p
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+- content_for :javascript do
+  :javascript
+    $(function() {
+
+        $(".truncate").dotdotdot({
+            watch: 'window'
+        });
+
+        $(".truncate1").dotdotdot({
+            watch: 'window',
+            ellipsis: ' ///...'
+        });
+
+        $(".truncate2").dotdotdot({
+            watch: 'window',
+            wrap: 'letter'
+        });
+
+    });

@@ -1,0 +1,485 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Basic Form
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong Basic Form
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-7
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Basic form
+            %small Simple login form example
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          .row
+            .col-sm-6.b-r
+              %h3.m-t-none.m-b Sign in
+              %p Sign in today for more expirience.
+              %form{:role => "form"}
+                .form-group
+                  %label Email
+                  %input.form-control{:placeholder => "Enter email", :type => "email"}/
+                .form-group
+                  %label Password
+                  %input.form-control{:placeholder => "Password", :type => "password"}/
+                %div
+                  %button.btn.btn-sm.btn-primary.pull-right.m-t-n-xs{:type => "submit"}
+                    %strong Log in
+                  %label
+                    %input.i-checks{:type => "checkbox"}/
+                    Remember me
+            .col-sm-6
+              %h4 Not a member?
+              %p You can create an account:
+              %p.text-center
+                %a{:href => ""}
+                  %i.fa.fa-sign-in.big-icon
+    .col-lg-5
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Horizontal form
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %form.form-horizontal
+            %p Sign in today for more expirience.
+            .form-group
+              %label.col-lg-2.control-label Email
+              .col-lg-10
+                %input.form-control{:placeholder => "Email", :type => "email"}/
+                %span.help-block.m-b-none Example block-level help text here.
+            .form-group
+              %label.col-lg-2.control-label Password
+              .col-lg-10
+                %input.form-control{:placeholder => "Password", :type => "password"}/
+            .form-group
+              .col-lg-offset-2.col-lg-10
+                .i-checks
+                  %label
+                    %input{:type => "checkbox"}/
+                    %i
+                    Remember me
+            .form-group
+              .col-lg-offset-2.col-lg-10
+                %button.btn.btn-sm.btn-white{:type => "submit"} Sign in
+  .row
+    .col-lg-8
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Inline form
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %form.form-inline{:role => "form"}
+            .form-group
+              %label.sr-only{:for => "exampleInputEmail2"} Email address
+              %input#exampleInputEmail2.form-control{:placeholder => "Enter email", :type => "email"}/
+            .form-group
+              %label.sr-only{:for => "exampleInputPassword2"} Password
+              %input#exampleInputPassword2.form-control{:placeholder => "Password", :type => "password"}/
+            .checkbox.m-r-xs
+              %input#checkbox1{:type => "checkbox"}/
+              %label{:for => "checkbox1"}
+                Remember me
+            %button.btn.btn-white{:type => "submit"} Sign in
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Modal form
+            %small Example of login in modal box
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          .text-center
+            %a.btn.btn-primary{"data-toggle" => "modal", :href => "#modal-form"} Form in simple modal box
+          #modal-form.modal.fade{"aria-hidden" => "true"}
+            .modal-dialog
+              .modal-content
+                .modal-body
+                  .row
+                    .col-sm-6.b-r
+                      %h3.m-t-none.m-b Sign in
+                      %p Sign in today for more expirience.
+                      %form{:role => "form"}
+                        .form-group
+                          %label Email
+                          %input.form-control{:placeholder => "Enter email", :type => "email"}/
+                        .form-group
+                          %label Password
+                          %input.form-control{:placeholder => "Password", :type => "password"}/
+                        %div
+                          %button.btn.btn-sm.btn-primary.pull-right.m-t-n-xs{:type => "submit"}
+                            %strong Log in
+                          %label
+                            %input.i-checks{:type => "checkbox"}/
+                            Remember me
+                    .col-sm-6
+                      %h4 Not a member?
+                      %p You can create an account:
+                      %p.text-center
+                        %a{:href => ""}
+                          %i.fa.fa-sign-in.big-icon
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            All form elements
+            %small With custom checbox and radion elements.
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %form.form-horizontal{:method => "get"}
+            .form-group
+              %label.col-sm-2.control-label Normal
+              .col-sm-10
+                %input.form-control{:type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Help text
+              .col-sm-10
+                %input.form-control{:type => "text"}/
+                %span.help-block.m-b-none A block of help text that breaks onto a new line and may extend beyond one line.
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Password
+              .col-sm-10
+                %input.form-control{:name => "password", :type => "password"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Placeholder
+              .col-sm-10
+                %input.form-control{:placeholder => "placeholder", :type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-lg-2.control-label Disabled
+              .col-lg-10
+                %input.form-control{:disabled => "disabled", :placeholder => "Disabled input here...", :type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-lg-2.control-label Static control
+              .col-lg-10
+                %p.form-control-static email@example.com
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label
+                Checkboxes and radios
+                %br/
+                %small.text-navy Normal Bootstrap elements
+              .col-sm-10
+                %div
+                  %label
+                    %input{:type => "checkbox", :value => ""}/
+                    Option one is this and that—be sure to include why it's great
+                %div
+                  %label
+                    %input#optionsRadios1{:checked => "checked", :name => "optionsRadios", :type => "radio", :value => "option1"}/
+                    Option one is this and that—be sure to
+                    include why it's great
+                %div
+                  %label
+                    %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}/
+                    Option two can be something else and selecting it will
+                    deselect option one
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Inline checkboxes
+              .col-sm-10
+                %label.checkbox-inline
+                  %input#inlineCheckbox1{:type => "checkbox", :value => "option1"}/
+                  a
+                %label.checkbox-inline
+                  %input#inlineCheckbox2{:type => "checkbox", :value => "option2"}/
+                  b
+                %label.checkbox-inline
+                  %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}/
+                  c
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label
+                Checkboxes &amp; radios
+                %br/
+                %small.text-navy Custom elements
+              .col-sm-10
+                .i-checks
+                  %label
+                    %input{:type => "checkbox", :value => ""}/
+                    %i
+                    Option one
+                .i-checks
+                  %label
+                    %input{:checked => "checked", :type => "checkbox", :value => ""}/
+                    %i
+                    Option two checked
+                .i-checks
+                  %label
+                    %input{:checked => "checked", :disabled => "disabled", :type => "checkbox", :value => ""}/
+                    %i
+                    Option three checked and disabled
+                .i-checks
+                  %label
+                    %input{:disabled => "disabled", :type => "checkbox", :value => ""}/
+                    %i
+                    Option four disabled
+                .i-checks
+                  %label
+                    %input{:name => "a", :type => "radio", :value => "option1"}/
+                    %i
+                    Option one
+                .i-checks
+                  %label
+                    %input{:checked => "checked", :name => "a", :type => "radio", :value => "option2"}/
+                    %i
+                    Option two checked
+                .i-checks
+                  %label
+                    %input{:checked => "checked", :disabled => "disabled", :type => "radio", :value => "option2"}/
+                    %i
+                    Option three checked and disabled
+                .i-checks
+                  %label
+                    %input{:disabled => "disabled", :name => "a", :type => "radio"}/
+                    %i
+                    Option four disabled
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Inline checkboxes
+              .col-sm-10
+                %label.checkbox-inline.i-checks
+                  %input{:type => "checkbox", :value => "option1"}>/
+                  a
+                %label.checkbox-inline.i-checks
+                  %input{:type => "checkbox", :value => "option2"}/
+                  b
+                %label.checkbox-inline.i-checks
+                  %input{:type => "checkbox", :value => "option3"}/
+                  c
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Select
+              .col-sm-10
+                %select.form-control.m-b{:name => "account"}
+                  %option option 1
+                  %option option 2
+                  %option option 3
+                  %option option 4
+                .col-lg-4.m-l-n
+                  %select.form-control{:multiple => "multiple"}
+                    %option option 1
+                    %option option 2
+                    %option option 3
+                    %option option 4
+            .hr-line-dashed
+            .form-group.has-success
+              %label.col-sm-2.control-label Input with success
+              .col-sm-10
+                %input.form-control{:type => "text"}/
+            .hr-line-dashed
+            .form-group.has-warning
+              %label.col-sm-2.control-label Input with warning
+              .col-sm-10
+                %input.form-control{:type => "text"}/
+            .hr-line-dashed
+            .form-group.has-error
+              %label.col-sm-2.control-label Input with error
+              .col-sm-10
+                %input.form-control{:type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Control sizing
+              .col-sm-10
+                %input.form-control.input-lg.m-b{:placeholder => ".input-lg", :type => "text"}/
+                %input.form-control.m-b{:placeholder => "Default input", :type => "text"}/
+                %input.form-control.input-sm{:placeholder => ".input-sm", :type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Column sizing
+              .col-sm-10
+                .row
+                  .col-md-2
+                    %input.form-control{:placeholder => ".col-md-2", :type => "text"}/
+                  .col-md-3
+                    %input.form-control{:placeholder => ".col-md-3", :type => "text"}/
+                  .col-md-4
+                    %input.form-control{:placeholder => ".col-md-4", :type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Input groups
+              .col-sm-10
+                .input-group.m-b
+                  %span.input-group-addon @
+                  %input.form-control{:placeholder => "Username", :type => "text"}/
+                .input-group.m-b
+                  %input.form-control{:type => "text"}/
+                  %span.input-group-addon .00
+                .input-group.m-b
+                  %span.input-group-addon $
+                  %input.form-control{:type => "text"}/
+                  %span.input-group-addon .00
+                .input-group.m-b
+                  %span.input-group-addon
+                    %input{:type => "checkbox"}/
+                  %input.form-control{:type => "text"}/
+                .input-group
+                  %span.input-group-addon
+                    %input{:type => "radio"}/
+                  %input.form-control{:type => "text"}/
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Button addons
+              .col-sm-10
+                .input-group.m-b
+                  %span.input-group-btn
+                    %button.btn.btn-primary{:type => "button"} Go!
+                  %input.form-control{:type => "text"}/
+                .input-group
+                  %input.form-control{:type => "text"}/
+                  %span.input-group-btn
+                    %button.btn.btn-primary{:type => "button"}
+                      Go!
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label With dropdowns
+              .col-sm-10
+                .input-group.m-b
+                  .input-group-btn
+                    %button.btn.btn-white.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                      Action
+                      %span.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{:href => "#"} Action
+                      %li
+                        %a{:href => "#"} Another action
+                      %li
+                        %a{:href => "#"} Something else here
+                      %li.divider
+                      %li
+                        %a{:href => "#"} Separated link
+                  %input.form-control{:type => "text"}/
+                .input-group
+                  %input.form-control{:type => "text"}/
+                  .input-group-btn
+                    %button.btn.btn-white.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                      Action
+                      %span.caret
+                    %ul.dropdown-menu.pull-right
+                      %li
+                        %a{:href => "#"} Action
+                      %li
+                        %a{:href => "#"} Another action
+                      %li
+                        %a{:href => "#"} Something else here
+                      %li.divider
+                      %li
+                        %a{:href => "#"} Separated link
+            .hr-line-dashed
+            .form-group
+              %label.col-sm-2.control-label Segmented
+              .col-sm-10
+                .input-group.m-b
+                  .input-group-btn
+                    %button.btn.btn-white{:tabindex => "-1", :type => "button"} Action
+                    %button.btn.btn-white.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                      %span.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{:href => "#"} Action
+                      %li
+                        %a{:href => "#"} Another action
+                      %li
+                        %a{:href => "#"} Something else here
+                      %li.divider
+                      %li
+                        %a{:href => "#"} Separated link
+                  %input.form-control{:type => "text"}/
+                .input-group
+                  %input.form-control{:type => "text"}/
+                  .input-group-btn
+                    %button.btn.btn-white{:tabindex => "-1", :type => "button"} Action
+                    %button.btn.btn-white.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                      %span.caret
+                    %ul.dropdown-menu.pull-right
+                      %li
+                        %a{:href => "#"} Action
+                      %li
+                        %a{:href => "#"} Another action
+                      %li
+                        %a{:href => "#"} Something else here
+                      %li.divider
+                      %li
+                        %a{:href => "#"} Separated link
+            .hr-line-dashed
+            .form-group
+              .col-sm-4.col-sm-offset-2
+                %button.btn.btn-white{:type => "submit"} Cancel
+                %button.btn.btn-primary{:type => "submit"} Save changes
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    
+    });

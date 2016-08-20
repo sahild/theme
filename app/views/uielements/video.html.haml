@@ -1,0 +1,94 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Responsible Video
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a UI
+      %li.active
+        %strong Responsible Video
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content.text-center
+          %h2
+            %i.fa.fa-expand
+            Resize the window to see how behaves responsive video.
+          %small
+            Just put video on
+            %code figure &gt; iframe
+            element. Script will do the rest.
+  .row
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Video window
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %figure
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "349", :src => "http://www.youtube.com/embed/bwj2s_5e12U", :width => "425"}
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Video description
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content.profile-content
+          %h4
+            %strong Microsoft's Concept of How 2019 Will Look Like - Official Video
+          %p
+            %i.fa.fa-clock-o
+            Uploaded on October 27, 2011
+          %h5
+            Science and Technology
+          %p
+            What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's seem to want to give consumer a glimpse of what
+            they want the future to look like.
+            %br/
+            %br/
+            %small
+              Microsoft has just released a video showcasing magical
+              %br/
+              gadget after magical gadget.
+            %br/
+            %br/
+            Earlier this month "Microsoft Office Labs Vision 2019,"
+            was released and now we have "Productivity Future Vision (2011)". Both are inspiring and beautifully edited.
+          .row.m-t-md
+            .col-md-3
+              %h5
+                %strong 169
+                Likes
+            .col-md-9
+              %h5
+                %strong 28
+                Comments
+- content_for :javascript do
+  :javascript
+    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function (e){
+        $('body').hasClass('fullscreen-video') ? $('body').removeClass('fullscreen-video') : $('body').addClass('fullscreen-video')
+    });

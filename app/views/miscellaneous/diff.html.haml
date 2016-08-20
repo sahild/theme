@@ -1,0 +1,96 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Text Diff
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Diff
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5 Diff plugin
+        .ibox-content
+          %strong jQuery.PrettyTextDiff
+          %p
+            A wrapper around Google's diff_match_patch library.
+            %br/
+            You can run diff on existing text by adding class
+            %code original
+            and
+            %code changed
+            and add element that compares text. Or you can pass text as a param of function. See example below.
+          .well
+            %h3.m-t-lg Standard example
+            .row.diff-wrapper
+              .col-md-4
+                %h4 Oryginal text
+                .original
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only
+                  centuries, but also the leap into electronic typesetting.
+              .col-md-4
+                %h4 Changed text
+                .changed
+                  Lorem Ipsum is simply typesetting dummy text of the
+                  printing and has been the industry's typesetting. Lorem Ipsum has been the
+                  industry's standard dummy text ever the 1500s, when an printer took a galley
+                  of type and simply it to make a type. It has survived not only five
+                  centuries, but survived not also the leap into electronic typesetting.
+              .col-md-4
+                %h4 Diff results
+                .diff1
+          %h3.m-t-lg As a function param
+          %p
+            Diff will run after textarea will change. So feel free to play with it to see Diff results.
+          .row.diff-wrapper2
+            .col-md-4
+              %h4 Oryginal text
+              %textarea#original.form-control.diff-textarea{:rows => "6"}
+                :preserve
+                  
+                  Lorem Ipsum is simply printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eve
+                                                                  .col-md-4
+              %h4 Diff results
+              .diff2
+            .col-md-4
+              %h4 New text
+              %textarea#changed.form-control.diff-textarea{:rows => "6"}
+                :preserve
+                  
+                  Ting dummy text of the printing and has been the industry's typesetting. Lorem Ipsum has been the industry's
+                                                      - content_for :javascript do
+  :javascript
+    $(function() {
+
+        // Initial diff1
+        $(".diff-wrapper").prettyTextDiff({
+            diffContainer: ".diff1"
+        });
+
+
+        // Initial diff2
+        $(".diff-wrapper2").prettyTextDiff({
+            originalContent: $('#original').val(),
+            changedContent: $('#changed').val(),
+            diffContainer: ".diff2"
+        });
+
+        // Run diff on textarea change
+        $(".diff-textarea").on('change keyup', function() {
+            $(".diff-wrapper2").prettyTextDiff({
+                originalContent: $('#original').val(),
+                changedContent: $('#changed').val(),
+                diffContainer: ".diff2"
+            });
+
+        });
+
+    });

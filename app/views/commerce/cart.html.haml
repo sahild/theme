@@ -1,0 +1,236 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 E-commerce shoping cart
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a E-commerce
+      %li.active
+        %strong Shoping cart
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-md-9
+      .ibox
+        .ibox-title
+          %span.pull-right
+            (
+            %strong> 5
+            ) items
+          %h5 Items in your cart
+        .ibox-content
+          .table-responsive
+            %table.table.shoping-cart-table
+              %tbody
+                %tr
+                  %td{:width => "90"}
+                    .cart-product-imitation
+                  %td.desc
+                    %h3
+                      %a.text-navy{:href => "#"}
+                        Desktop publishing software
+                    %p.small
+                      It is a long established fact that a reader will be distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    %dl.small.m-b-none
+                      %dt Description lists
+                      %dd A description list is perfect for defining terms.
+                    .m-t-sm
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-gift
+                        Add gift package
+                      |
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-trash
+                        Remove item
+                  %td
+                    $180,00
+                    %s.small.text-muted $230,00
+                  %td{:width => "65"}
+                    %input.form-control{:placeholder => "1", :type => "text"}/
+                  %td
+                    %h4
+                      $180,00
+        .ibox-content
+          .table-responsive
+            %table.table.shoping-cart-table
+              %tbody
+                %tr
+                  %td{:width => "90"}
+                    .cart-product-imitation
+                  %td.desc
+                    %h3
+                      %a.text-navy{:href => "#"}
+                        Text editor
+                    %p.small
+                      There are many variations of passages of Lorem Ipsum available
+                    %dl.small.m-b-none
+                      %dt Description lists
+                      %dd List is perfect for defining terms.
+                    .m-t-sm
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-gift
+                        Add gift package
+                      |
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-trash
+                        Remove item
+                  %td
+                    $50,00
+                    %s.small.text-muted $63,00
+                  %td{:width => "65"}
+                    %input.form-control{:placeholder => "2", :type => "text"}/
+                  %td
+                    %h4
+                      $100,00
+        .ibox-content
+          .table-responsive
+            %table.table.shoping-cart-table
+              %tbody
+                %tr
+                  %td{:width => "90"}
+                    .cart-product-imitation
+                  %td.desc
+                    %h3
+                      %a.text-navy{:href => "#"}
+                        CRM software
+                    %p.small
+                      Distracted by the readable
+                      content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    %dl.small.m-b-none
+                      %dt Description lists
+                      %dd A description list is perfect for defining terms.
+                    .m-t-sm
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-gift
+                        Add gift package
+                      |
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-trash
+                        Remove item
+                  %td
+                    $110,00
+                  %td{:width => "65"}
+                    %input.form-control{:placeholder => "1", :type => "text"}/
+                  %td
+                    %h4
+                      $110,00
+        .ibox-content
+          .table-responsive
+            %table.table.shoping-cart-table
+              %tbody
+                %tr
+                  %td{:width => "90"}
+                    .cart-product-imitation
+                  %td.desc
+                    %h3
+                      %a.text-navy{:href => "#"}
+                        PM software
+                    %p.small
+                      Readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    %dl.small.m-b-none
+                      %dt Description lists
+                      %dd A description list is perfect for defining terms.
+                    .m-t-sm
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-gift
+                        Add gift package
+                      |
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-trash
+                        Remove item
+                  %td
+                    $130,00
+                  %td{:width => "65"}
+                    %input.form-control{:placeholder => "1", :type => "text"}/
+                  %td
+                    %h4
+                      $130,00
+        .ibox-content
+          .table-responsive
+            %table.table.shoping-cart-table
+              %tbody
+                %tr
+                  %td{:width => "90"}
+                    .cart-product-imitation
+                  %td.desc
+                    %h3
+                      %a.text-navy{:href => "#"}
+                        Photo editor
+                    %p.small
+                      Page when looking at its layout. The point of using Lorem Ipsum is
+                    %dl.small.m-b-none
+                      %dt Description lists
+                      %dd A description list is perfect for defining terms.
+                    .m-t-sm
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-gift
+                        Add gift package
+                      |
+                      %a.text-muted{:href => "#"}
+                        %i.fa.fa-trash
+                        Remove item
+                  %td
+                    $700,00
+                  %td{:width => "65"}
+                    %input.form-control{:placeholder => "1", :type => "text"}/
+                  %td
+                    %h4
+                      $70,00
+        .ibox-content
+          %button.btn.btn-primary.pull-right
+            %i.fa.fa.fa-shopping-cart
+            Checkout
+          %button.btn.btn-white
+            %i.fa.fa-arrow-left
+            Continue shopping
+    .col-md-3
+      .ibox
+        .ibox-title
+          %h5 Cart Summary
+        .ibox-content
+          %span
+            Total
+          %h2.font-bold
+            $390,00
+          %hr/
+          %span.text-muted.small
+            *For United States, France and Germany applicable sales tax will be applied
+          .m-t-sm
+            .btn-group
+              %a.btn.btn-primary.btn-sm{:href => "#"}
+                %i.fa.fa-shopping-cart
+                Checkout
+              %a.btn.btn-white.btn-sm{:href => "#"} Cancel
+      .ibox
+        .ibox-title
+          %h5 Support
+        .ibox-content.text-center
+          %h3
+            %i.fa.fa-phone
+            +43 100 783 001
+          %span.small
+            Please contact with us if you have any questions. We are avalible 24h.
+      .ibox
+        .ibox-content
+          %p.font-bold
+            Other products you may be interested
+          %hr/
+          %div
+            %a.product-name{:href => "#"} Product 1
+            .small.m-t-xs
+              Many desktop publishing packages and web page editors now.
+            .m-t.text-righ
+              %a.btn.btn-xs.btn-outline.btn-primary{:href => "#"}
+                Info
+                %i.fa.fa-long-arrow-right
+          %hr/
+          %div
+            %a.product-name{:href => "#"} Product 2
+            .small.m-t-xs
+              Many desktop publishing packages and web page editors now.
+            .m-t.text-righ
+              %a.btn.btn-xs.btn-outline.btn-primary{:href => "#"}
+                Info
+                %i.fa.fa-long-arrow-right

@@ -1,0 +1,25 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-8
+    %h2 Invoice
+    %ol.breadcrumb
+      %li
+        %a{:href => ""}
+        = url_for :controller = 'dashboards', :action = 'dashboard_1'
+        "&gt;Home
+    %li
+      Other Pages
+    %li.active
+      %strong Invoice
+.col-lg-4
+  .title-action
+    %a.btn.btn-white{:href => "#"}
+      %i.fa.fa-pencil
+      Edit
+    %a.btn.btn-white{:href => "#"}
+      %i.fa.fa-check
+      Save
+    %a{:href => ""}
+    = url_for :controller = 'pages', :action = 'invoice_print'
+    " target="_blank" class="btn btn-primary"&gt;
+    %i.fa.fa-print
+    Print Invoice

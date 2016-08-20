@@ -1,0 +1,197 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Wizard
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong Wizard
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-5
+      .jumbotron
+        %h1 Steps
+        %p Smart UI component which allows you to easily create wizard-like interfaces.
+        %p
+          %a.btn.btn-primary.btn-lg{:href => "http://www.jquery-steps.com/GettingStarted", :role => "button", :target => "_blank"} Learn more about jQuery Steps
+    .col-lg-7
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Basic Wizzard
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            This is basic example of Step
+          #wizard
+            %h1 First Step
+            .step-content
+              .text-center.m-t-md
+                %h2 Hello in Step 1
+                %p
+                  This is the first content.
+            %h1 Second Step
+            .step-content
+              .text-center.m-t-md
+                %h2 This is step 2
+                %p
+                  This content is diferent than the first one.
+            %h1 Third Step
+            .step-content
+              .text-center.m-t-md
+                %h2 This is step 3
+                %p
+                  This is last content.
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5 Wizard with Validation
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h2
+            Validation Wizard Form
+          %p
+            This example show how to use Steps with jQuery Validation plugin.
+          %form#form.wizard-big{:action => "#"}
+            %h1 Account
+            %fieldset
+              %h2 Account Information
+              .row
+                .col-lg-8
+                  .form-group
+                    %label Username *
+                    %input#userName.form-control.required{:name => "userName", :type => "text"}/
+                  .form-group
+                    %label Password *
+                    %input#password.form-control.required{:name => "password", :type => "text"}/
+                  .form-group
+                    %label Confirm Password *
+                    %input#confirm.form-control.required{:name => "confirm", :type => "text"}/
+                .col-lg-4
+                  .text-center
+                    %div{:style => "margin-top: 20px"}
+                      %i.fa.fa-sign-in{:style => "font-size: 180px;color: #e5e5e5 "}
+            %h1 Profile
+            %fieldset
+              %h2 Profile Information
+              .row
+                .col-lg-6
+                  .form-group
+                    %label First name *
+                    %input#name.form-control.required{:name => "name", :type => "text"}/
+                  .form-group
+                    %label Last name *
+                    %input#surname.form-control.required{:name => "surname", :type => "text"}/
+                .col-lg-6
+                  .form-group
+                    %label Email *
+                    %input#email.form-control.required.email{:name => "email", :type => "text"}/
+                  .form-group
+                    %label Address *
+                    %input#address.form-control{:name => "address", :type => "text"}/
+            %h1 Warning
+            %fieldset
+              .text-center{:style => "margin-top: 120px"}
+                %h2 You did it Man :-)
+            %h1 Finish
+            %fieldset
+              %h2 Terms and Conditions
+              %input#acceptTerms.required{:name => "acceptTerms", :type => "checkbox"}/
+              %label{:for => "acceptTerms"} I agree with the Terms and Conditions.
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $("#wizard").steps();
+        $("#form").steps({
+            bodyTag: "fieldset",
+            onStepChanging: function (event, currentIndex, newIndex) {
+                // Always allow going backward even if the current step contains invalid fields!
+                if (currentIndex > newIndex) {
+                    return true;
+                }
+    
+                // Forbid suppressing "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18) {
+                    return false;
+                }
+    
+                var form = $(this);
+    
+                // Clean up if user went backward before
+                if (currentIndex < newIndex) {
+                    // To remove error styles
+                    $(".body:eq(" + newIndex + ") label.error", form).remove();
+                    $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                }
+    
+                // Disable validation on fields that are disabled or hidden.
+                form.validate().settings.ignore = ":disabled,:hidden";
+    
+                // Start validation; Prevent going forward if false
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex) {
+                // Suppress (skip) "Warning" step if the user is old enough.
+                if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                    $(this).steps("next");
+                }
+    
+                // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                if (currentIndex === 2 && priorIndex === 3) {
+                    $(this).steps("previous");
+                }
+            },
+            onFinishing: function (event, currentIndex) {
+                var form = $(this);
+    
+                // Disable validation on fields that are disabled.
+                // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                form.validate().settings.ignore = ":disabled";
+    
+                // Start validation; Prevent form submission if false
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex) {
+                var form = $(this);
+    
+                // Submit form input
+                form.submit();
+            }
+        }).validate({
+                    errorPlacement: function (error, element) {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
+                    }
+                });
+    
+    });

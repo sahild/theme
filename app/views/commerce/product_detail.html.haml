@@ -1,0 +1,143 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Product detail
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a E-commerce
+      %li.active
+        %strong Product detail
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox.product-detail
+        .ibox-content
+          .row
+            .col-md-5
+              .product-images
+                %div
+                  .image-imitation
+                    [IMAGE 1]
+                %div
+                  .image-imitation
+                    [IMAGE 2]
+                %div
+                  .image-imitation
+                    [IMAGE 3]
+            .col-md-7
+              %h2.font-bold.m-b-xs
+                Desktop publishing software
+              %small Many desktop publishing packages and web page editors now.
+              .m-t-md
+                %h2.product-main-price
+                  $406,602
+                  %small.text-muted Exclude Tax
+              %hr/
+              %h4 Product description
+              .small.text-muted
+                It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                %br/
+                %br/
+                There are many variations of passages of Lorem Ipsum available, but the majority
+                have suffered alteration in some form, by injected humour, or randomised words
+                which don't look even slightly believable.
+              %dl.small.m-t-md
+                %dt Description lists
+                %dd A description list is perfect for defining terms.
+                %dt Euismod
+                %dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                %dd Donec id elit non mi porta gravida at eget metus.
+                %dt Malesuada porta
+                %dd Etiam porta sem malesuada magna mollis euismod.
+              %hr/
+              %div
+                .btn-group
+                  %button.btn.btn-primary.btn-sm
+                    %i.fa.fa-cart-plus
+                    Add to cart
+                  %button.btn.btn-white.btn-sm
+                    %i.fa.fa-star
+                    Add to wishlist
+                  %button.btn.btn-white.btn-sm
+                    %i.fa.fa-envelope
+                    Contact with author
+        .ibox-footer
+          %span.pull-right
+            Full stock -
+            %i.fa.fa-clock-o
+            14.04.2016 10:04 pm
+          The generated Lorem Ipsum is therefore always free
+  .row
+    .col-lg-12
+      .ibox.product-detail
+        .ibox-content
+          .row
+            .col-md-5
+              .product-images
+                %div
+                  .image-imitation
+                    [IMAGE 1]
+                %div
+                  .image-imitation
+                    [IMAGE 2]
+                %div
+                  .image-imitation
+                    [IMAGE 3]
+            .col-md-7
+              %h2.font-bold.m-b-xs
+                Desktop publishing software
+              %small Many desktop publishing packages and web page editors now.
+              %hr/
+              %div
+                %button.btn.btn-primary.pull-right Add to cart
+                %h1.product-main-price
+                  $406,602
+                  %small.text-muted Exclude Tax
+              %hr/
+              %h4 Product description
+              .small.text-muted
+                It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal distribution of letters, as opposed to using
+                'Content here, content here', making it look like readable English.
+                %br/
+                %br/
+                There are many variations of passages of Lorem Ipsum available, but the majority
+                have suffered alteration in some form, by injected humour, or randomised words
+                which don't look even slightly believable.
+              %dl.dl-horizontal.m-t-md.small
+                %dt Description lists
+                %dd A description list is perfect for defining terms.
+                %dt Euismod
+                %dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                %dd Donec id elit non mi porta gravida at eget metus.
+                %dt Malesuada porta
+                %dd Etiam porta sem malesuada magna mollis euismod.
+                %dt Felis euismod semper eget
+                %dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              .text-right
+                .btn-group
+                  %button.btn.btn-white.btn-sm
+                    %i.fa.fa-star
+                    Add to wishlist
+                  %button.btn.btn-white.btn-sm
+                    %i.fa.fa-envelope
+                    Contact with author
+        .ibox-footer
+          %span.pull-right
+            Full stock -
+            %i.fa.fa-clock-o
+            14.04.2016 10:04 pm
+          The generated Lorem Ipsum is therefore always free
+- content_for :javascript do
+  :javascript
+    $(window).load(function() {
+    
+        $('.product-images').slick({
+            dots: true
+        });
+    
+    });

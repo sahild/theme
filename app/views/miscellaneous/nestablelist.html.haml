@@ -1,0 +1,150 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Nestable list
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Tables
+      %li.active
+        %strong Nestable list
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-md-4
+      #nestable-menu
+        %button.btn.btn-white.btn-sm{"data-action" => "expand-all", :type => "button"} Expand All
+        %button.btn.btn-white.btn-sm{"data-action" => "collapse-all", :type => "button"} Collapse All
+  .row
+    .col-lg-6
+      .ibox
+        .ibox-title
+          %h5 Nestable basic list
+        .ibox-content
+          %p.m-b-lg
+            %strong Nestable
+            is an interactive hierarchical list. You can drag and drop to rearrange the order. It works well on touch-screens.
+          #nestable.dd
+            %ol.dd-list
+              %li.dd-item{"data-id" => "1"}
+                .dd-handle 1 - Lorem ipsum
+              %li.dd-item{"data-id" => "2"}
+                .dd-handle 2 - Dolor sit
+                %ol.dd-list
+                  %li.dd-item{"data-id" => "3"}
+                    .dd-handle 3 - Adipiscing elit
+                  %li.dd-item{"data-id" => "4"}
+                    .dd-handle 4 - Nonummy nibh
+              %li.dd-item{"data-id" => "5"}
+                .dd-handle 5 - Consectetuer
+                %ol.dd-list
+                  %li.dd-item{"data-id" => "6"}
+                    .dd-handle 6 - Aliquam erat
+                  %li.dd-item{"data-id" => "7"}
+                    .dd-handle 7 - Veniam quis
+              %li.dd-item{"data-id" => "8"}
+                .dd-handle 8 - Tation ullamcorper
+              %li.dd-item{"data-id" => "9"}
+                .dd-handle 9 - Ea commodo
+          .m-t-md
+            %h5 Serialised Output
+          %textarea#nestable-output.form-control
+    .col-lg-6
+      .ibox
+        .ibox-title
+          %h5 Nestable custom theme list
+        .ibox-content
+          %p.m-b-lg
+            Each list you can customize by standard css styles. Each element is responsive so you can add to it any other element to improve functionality of list.
+          #nestable2.dd
+            %ol.dd-list
+              %li.dd-item{"data-id" => "1"}
+                .dd-handle
+                  %span.label.label-info
+                    %i.fa.fa-users
+                  Cras ornare tristique.
+                %ol.dd-list
+                  %li.dd-item{"data-id" => "2"}
+                    .dd-handle
+                      %span.pull-right 12:00 pm
+                      %span.label.label-info
+                        %i.fa.fa-cog
+                      Vivamus vestibulum nulla nec ante.
+                  %li.dd-item{"data-id" => "3"}
+                    .dd-handle
+                      %span.pull-right 11:00 pm
+                      %span.label.label-info
+                        %i.fa.fa-bolt
+                      Nunc dignissim risus id metus.
+                  %li.dd-item{"data-id" => "4"}
+                    .dd-handle
+                      %span.pull-right 11:00 pm
+                      %span.label.label-info
+                        %i.fa.fa-laptop
+                      Vestibulum commodo
+              %li.dd-item{"data-id" => "5"}
+                .dd-handle
+                  %span.label.label-warning
+                    %i.fa.fa-users
+                  Integer vitae libero.
+                %ol.dd-list
+                  %li.dd-item{"data-id" => "6"}
+                    .dd-handle
+                      %span.pull-right 15:00 pm
+                      %span.label.label-warning
+                        %i.fa.fa-users
+                      Nam convallis pellentesque nisl.
+                  %li.dd-item{"data-id" => "7"}
+                    .dd-handle
+                      %span.pull-right 16:00 pm
+                      %span.label.label-warning
+                        %i.fa.fa-bomb
+                      Vivamus molestie gravida turpis
+                  %li.dd-item{"data-id" => "8"}
+                    .dd-handle
+                      %span.pull-right 21:00 pm
+                      %span.label.label-warning
+                        %i.fa.fa-child
+                      Ut aliquam sollicitudin leo.
+          .m-t-md
+            %h5 Serialised Output
+          %textarea#nestable2-output.form-control
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        var updateOutput = function (e) {
+            var list = e.length ? e : $(e.target),
+                    output = list.data('output');
+            if (window.JSON) {
+                output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+            } else {
+                output.val('JSON browser support required for this demo.');
+            }
+        };
+        // activate Nestable for list 1
+        $('#nestable').nestable({
+            group: 1
+        }).on('change', updateOutput);
+    
+        // activate Nestable for list 2
+        $('#nestable2').nestable({
+            group: 1
+        }).on('change', updateOutput);
+    
+        // output initial serialised data
+        updateOutput($('#nestable').data('output', $('#nestable-output')));
+        updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+    
+        $('#nestable-menu').on('click', function (e) {
+            var target = $(e.target),
+                    action = target.data('action');
+            if (action === 'expand-all') {
+                $('.dd').nestable('expandAll');
+            }
+            if (action === 'collapse-all') {
+                $('.dd').nestable('collapseAll');
+            }
+        });
+    
+    });

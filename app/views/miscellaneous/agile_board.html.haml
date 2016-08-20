@@ -1,0 +1,207 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Agile board
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Agile board
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-4
+      .ibox
+        .ibox-content
+          %h3 To-do
+          %p.small
+            %i.fa.fa-hand-o-up
+            Drag task between list
+          .input-group
+            %input.input.input-sm.form-control{:placeholder => "Add new task. ", :type => "text"}/
+            %span.input-group-btn
+              %button.btn.btn-sm.btn-white{:type => "button"}
+                %i.fa.fa-plus
+                Add task
+          %ul#todo.sortable-list.connectList.agile-list
+            %li#task1.warning-element
+              Simply dummy text of the printing and typesetting industry.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                12.10.2015
+            %li#task2.success-element
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+            %li#task3.info-element
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                16.11.2015
+            %li#task4.danger-element
+              All the Lorem Ipsum generators
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-primary{:href => "#"} Done
+                %i.fa.fa-clock-o
+                06.10.2015
+            %li#task5.warning-element
+              Which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                09.12.2015
+            %li#task6.warning-element
+              Packages and web page editors now use Lorem Ipsum as
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-primary{:href => "#"} Done
+                %i.fa.fa-clock-o
+                08.04.2015
+            %li#task7.success-element
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+            %li#task8.info-element
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                16.11.2015
+    .col-lg-4
+      .ibox
+        .ibox-content
+          %h3 In Progress
+          %p.small
+            %i.fa.fa-hand-o-up
+            Drag task between list
+          %ul#inprogress.sortable-list.connectList.agile-list
+            %li#task9.success-element
+              Quisque venenatis ante in porta suscipit.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                12.10.2015
+            %li#task10.success-element
+              Phasellus sit amet tortor sed enim mollis accumsan in consequat orci.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+            %li#task11.warning-element
+              Nunc sed arcu at ligula faucibus tempus ac id felis. Vestibulum et nulla quis turpis sagittis fringilla.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                16.11.2015
+            %li#task12.warning-element
+              Ut porttitor augue non sapien mollis accumsan.
+              Nulla non elit eget lacus elementum viverra.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                09.12.2015
+            %li#task13.info-element
+              Packages and web page editors now use Lorem Ipsum as
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-primary{:href => "#"} Done
+                %i.fa.fa-clock-o
+                08.04.2015
+            %li#task14.success-element
+              Quisque lacinia tellus et odio ornare maximus.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+            %li#task15.danger-element
+              Enim mollis accumsan in consequat orci.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                11.04.2015
+    .col-lg-4
+      .ibox
+        .ibox-content
+          %h3 Completed
+          %p.small
+            %i.fa.fa-hand-o-up
+            Drag task between list
+          %ul#completed.sortable-list.connectList.agile-list
+            %li#task16.info-element
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                16.11.2015
+            %li#task17.warning-element
+              Ut porttitor augue non sapien mollis accumsan.
+              Nulla non elit eget lacus elementum viverra.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                09.12.2015
+            %li#task18.warning-element
+              Which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                09.12.2015
+            %li#task19.warning-element
+              Packages and web page editors now use Lorem Ipsum as
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-primary{:href => "#"} Done
+                %i.fa.fa-clock-o
+                08.04.2015
+            %li#task20.success-element
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+            %li#task21.info-element
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                16.11.2015
+            %li#task22.warning-element
+              Simply dummy text of the printing and typesetting industry.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Tag
+                %i.fa.fa-clock-o
+                12.10.2015
+            %li#task23.success-element
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              .agile-detail
+                %a.pull-right.btn.btn-xs.btn-white{:href => "#"} Mark
+                %i.fa.fa-clock-o
+                05.04.2015
+  .row
+    .col-lg-12
+      %h4
+        Serialised Output
+      %p
+        Serializes the sortable's item id's into an array of string.
+      .output.p-m.m.white-bg
+- content_for :javascript do
+  :javascript
+    $(function() {
+
+        $("#todo, #inprogress, #completed").sortable({
+            connectWith: ".connectList",
+            update: function( event, ui ) {
+
+                var todo = $( "#todo" ).sortable( "toArray" );
+                var inprogress = $( "#inprogress" ).sortable( "toArray" );
+                var completed = $( "#completed" ).sortable( "toArray" );
+                $('.output').html("ToDo: " + window.JSON.stringify(todo) + "<br/>" + "In Progress: " + window.JSON.stringify(inprogress) + "<br/>" + "Completed: " + window.JSON.stringify(completed));
+            }
+        }).disableSelection();
+
+
+    });

@@ -1,0 +1,208 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Text Editor
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong Text Editor
+  .col-lg-2
+.wrapper.wrapper-content
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            Bootstrap markdown
+            %small http://www.codingdrama.com/bootstrap-markdown/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            Bootstrap-Markdown designed to be easily integrated with your bootstrap project. It exposes useful API that allow you to fully hook-in into the plugin
+          %p
+            Switch regular textarea within your form into Bootstrap-Markdown editor seamlessly by adding
+            %code data-provide="markdown"
+            attribute
+          %textarea{"data-provide" => "markdown", :name => "content", :rows => "10"}
+            :preserve
+              
+              h1 header
+              ============
+              
+              Paragraphs are separated by a blank line.
+              
+              2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+              look like:
+              
+                * this one
+                * that one
+                * the other one
+                                            .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          %h2
+            Usage
+          %p
+            Beside using above data-attributes, you could call it via code
+          %pre
+            :preserve
+              
+              $("#some-textarea").markdown(autofocus:false,savable:false})           %h4
+            Available options are:
+          %table.table.table-striped
+            %thead
+              %tr
+                %th Option Name
+                %th Type
+                %th Description
+            %tbody
+              %tr
+                %td
+                  %code autofocus
+                %td
+                  %code boolean
+                %td
+                  Indicates that editor will focused after instantiated. Default to
+                  %code false
+              %tr
+                %td
+                  %code savable
+                %td
+                  %code boolean
+                %td
+                  Indicates that editor will have save button and action. Default to
+                  %code false
+              %tr
+                %td
+                  %code hideable
+                %td
+                  %code boolean
+                %td
+                  If set to
+                  %code true
+                  then the editor will be hidden on
+                  %code blur
+                  event. Default to
+                  %code false
+              %tr
+                %td
+                  %code width
+                %td
+                  %code mixed
+                %td
+                  The editor width. Default to
+                  = succeed "." do
+                    %code inherit
+                  = succeed ")" do
+                    %code span2
+              %tr
+                %td
+                  %code height
+                %td
+                  %code mixed
+                %td
+                  The editor height. Default to
+                  %code inherit
+              %tr
+                %td
+                  %code resize
+                %td
+                  %code string
+                %td
+                  Option to disable or change the resize property, possible values
+                  = succeed "," do
+                    %code none
+                  = succeed "," do
+                    %code both
+                  = succeed "," do
+                    %code horizontal
+                  = succeed "." do
+                    %code vertical
+                  %code none
+                  %br/
+                  If this option is enabled, the user will be able to resize the editor and preview screen.
+                  %br/
+                  %br/
+                  .alert.alert-warning
+                    %strong Browser support
+                    %p
+                      This is currently only supported on limited browsers. See
+                      %a{:href => "http://caniuse.com/css-resize", :target => "_blank"} Can you run it: Resize
+                      for all supported browsers
+              %tr
+                %td
+                  %code iconlibrary
+                %td
+                  %code string
+                %td
+                  The icon library to use. Glyphicons (
+                  %code> glyph
+                  ) and Font Awesome (
+                  %code> fa
+                  ) are supported. In order to use Font Awesome properly, you'll need to
+                  %a{:href => "http://fontawesome.io/get-started/"} include Font Awesome stylesheet
+                  yourself. Default to
+                  %code glyph
+              %tr
+                %td
+                  %code language
+                %td
+                  %code string
+                %td
+                  Localization setting. Default to
+                  %code en
+              %tr
+                %td
+                  %code footer
+                %td
+                  %code mixed
+                %td Footer dom. Can be string or callback. Default is empty string
+              %tr
+                %td
+                  %code fullscreen
+                %td
+                  %code object
+                %td
+                  Contains
+                  %code enable
+                  (
+                  %code> bool
+                  ) and
+                  %code icons
+                  (
+                  %code> object
+                  ) keys.
+              %tr
+                %td
+                  %code hiddenButtons
+                %td
+                  %code mixed
+                %td Array or string of button names to be hidden. Default is empty string
+              %tr
+                %td
+                  %code disabledButtons
+                %td
+                  %code mixed
+                %td Array or string of button names to be disabled. Default is empty string
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+    
+        });
+    
+    });

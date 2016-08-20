@@ -1,0 +1,151 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 CSS Animations
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li.active
+        %strong CSS Animations
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeIn
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5
+            CSS Animations
+            %small http://daneden.github.io/animate.css/
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content.text-center.css-animation-box
+          %h1.text-navy
+            Animation.css
+          %p
+            A cross-browser library of CSS animations.  Animation.css is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great for emphasis, home pages, sliders, and general just-add-water-awesomeness.
+          .hr-line-dashed
+          .row
+            .col-sm-6.text-center
+              %h4.m-b-lg
+                Example box for animation effect.
+              #animation_box.animated
+                %p.animation-text-info
+                  This is simple example of Rickshaw charts. You can use animation on any objects: text, charts, images, tables etc.
+                .text-center.wrapper-content.animation-text-box
+                  %h2 48%
+                  %p Sales marketing
+                #rickshaw_multi.rickshaw_graph
+            .col-lg-6.animation-efect-links.text-center
+              %h4.m-b-lg
+                Use any animation button to turn on the animation on box example.
+              / <h5 class="text-navy">Attention Seekers</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "bounce", :href => "#"} bounce
+              %a.btn.btn-white.animation_select{"data-animation" => "flash", :href => "#"} flash
+              %a.btn.btn-white.animation_select{"data-animation" => "pulse", :href => "#"} pulse
+              %a.btn.btn-white.animation_select{"data-animation" => "rubberBand", :href => "#"} rubberBand
+              %a.btn.btn-white.animation_select{"data-animation" => "shake", :href => "#"} shake
+              %a.btn.btn-white.animation_select{"data-animation" => "swing", :href => "#"} swing
+              %a.btn.btn-white.animation_select{"data-animation" => "tada", :href => "#"} tada
+              %a.btn.btn-white.animation_select{"data-animation" => "wobble", :href => "#"} wobble
+              / <h5 class="text-navy">Bouncing Entrances</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceIn", :href => "#"} bounceIn
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceInDown", :href => "#"} bounceInDown
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceInLeft", :href => "#"} bounceInLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceInRight", :href => "#"} bounceInRight
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceInUp", :href => "#"} bounceInUp
+              / <h5 class="text-navy">Bouncing Exits</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceOut", :href => "#"} bounceOut
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceOutDown", :href => "#"} bounceOutDown
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceOutLeft", :href => "#"} bounceOutLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceOutRight", :href => "#"} bounceOutRight
+              %a.btn.btn-white.animation_select{"data-animation" => "bounceOutUp", :href => "#"} bounceOutUp
+              / <h5 class="text-navy">Fading Entrances</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeIn", :href => "#"} fadeIn
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInDown", :href => "#"} fadeInDown
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInDownBig", :href => "#"} fadeInDownBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInLeft", :href => "#"} fadeInLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInLeftBig", :href => "#"} fadeInLeftBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInRight", :href => "#"} fadeInRight
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInRightBig", :href => "#"} fadeInRightBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInUp", :href => "#"} fadeInUp
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeInUpBig", :href => "#"} fadeInUpBig
+              / <h5 class="text-navy">Fading Exits</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOut", :href => "#"} fadeOut
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutDown", :href => "#"} fadeOutDown
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutDownBig", :href => "#"} fadeOutDownBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutLeft", :href => "#"} fadeOutLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutLeftBig", :href => "#"} fadeOutLeftBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutRight", :href => "#"} fadeOutRight
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutRightBig", :href => "#"} fadeOutRightBig
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutUp", :href => "#"} fadeOutUp
+              %a.btn.btn-white.animation_select{"data-animation" => "fadeOutUpBig", :href => "#"} fadeOutUpBig
+              / <h5 class="text-navy">Flippers</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "flip", :href => "#"} flip
+              %a.btn.btn-white.animation_select{"data-animation" => "flipInX", :href => "#"} flipInX
+              %a.btn.btn-white.animation_select{"data-animation" => "flipInY", :href => "#"} flipInY
+              %a.btn.btn-white.animation_select{"data-animation" => "flipOutX", :href => "#"} flipOutX
+              %a.btn.btn-white.animation_select{"data-animation" => "flipOutY", :href => "#"} flipOutY
+              / <h5 class="text-navy">Lightspeed</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "lightSpeedIn", :href => "#"} lightSpeedIn
+              %a.btn.btn-white.animation_select{"data-animation" => "lightSpeedOut", :href => "#"} lightSpeedOut
+              / <h5 class="text-navy">Rotating Entrances</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateIn", :href => "#"} rotateIn
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateInDownLeft", :href => "#"} rotateInDownLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateInDownRight", :href => "#"} rotateInDownRight
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateInUpLeft", :href => "#"} rotateInUpLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateInUpRight", :href => "#"} rotateInUpRight
+              / <h5 class="text-navy">Rotating Exits</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateOut", :href => "#"} rotateOut
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateOutDownLeft", :href => "#"} rotateOutDownLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateOutDownRight", :href => "#"} rotateOutDownRight
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateOutUpLeft", :href => "#"} rotateOutUpLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "rotateOutUpRight", :href => "#"} rotateOutUpRight
+              / <h5 class="text-navy">Sliders</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "slideInDown", :href => "#"} slideInDown
+              %a.btn.btn-white.animation_select{"data-animation" => "slideInLeft", :href => "#"} slideInLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "slideInRight", :href => "#"} slideInRight
+              %a.btn.btn-white.animation_select{"data-animation" => "slideOutLeft", :href => "#"} slideOutLeft
+              %a.btn.btn-white.animation_select{"data-animation" => "slideOutRight", :href => "#"} slideOutRight
+              %a.btn.btn-white.animation_select{"data-animation" => "slideOutUp", :href => "#"} slideOutUp
+              / <h5 class="text-navy">Specials</h5>
+              %a.btn.btn-white.animation_select{"data-animation" => "hinge", :href => "#"} hinge
+              %a.btn.btn-white.animation_select{"data-animation" => "rollIn", :href => "#"} rollIn
+              %a.btn.btn-white.animation_select{"data-animation" => "rollOut", :href => "#"} rollOut
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $('.animation_select').click(function () {
+            $('#animation_box').removeAttr('class').attr('class', '');
+            var animation = $(this).attr("data-animation");
+            $('#animation_box').addClass('animated');
+            $('#animation_box').addClass(animation);
+            return false;
+        });
+    
+        var graph2 = new Rickshaw.Graph({
+            element: document.querySelector("#rickshaw_multi"),
+            renderer: 'area',
+            stroke: true,
+            series: [{
+                data: [{ x: 0, y: 2 }, { x: 1, y: 5 }, { x: 2, y: 8 }, { x: 3, y: 4 }, { x: 4, y: 8 }],
+                color: '#1ab394',
+                stroke: '#17997f'
+            }, {
+                data: [{ x: 0, y: 13 }, { x: 1, y: 15 }, { x: 2, y: 17 }, { x: 3, y: 12 }, { x: 4, y: 10 }],
+                color: '#eeeeee',
+                stroke: '#d7d7d7'
+            }]
+        });
+        graph2.renderer.unstack = true;
+        graph2.render();
+    });

@@ -1,0 +1,124 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Badges, Labels, Progress
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a UI Elements
+      %li.active
+        %strong Badges, Labels, Progress
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Badges
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            To add a badge style You have to add
+            = succeed "class" do
+              %code .badge
+            = succeed "." do
+              %code .badge-primary
+          %p
+            %span.badge Plain
+          %p
+            %span.badge.badge-primary Primary
+          %p
+            %span.badge.badge-info Information
+          %p
+            %span.badge.badge-success Success
+          %p
+            %span.badge.badge-warning Warning
+          %p
+            %span.badge.badge-danger Danger
+    .col-lg-6
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Labels
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %p
+            Analogic to badge. To add a label style You have to add
+            = succeed "class" do
+              %code .label
+            = succeed "." do
+              %code .label-primary
+          %p
+            %span.label Plain
+          %p
+            %span.label.label-primary Primary
+          %p
+            %span.label.label-info Information
+          %p
+            %span.label.label-success Success
+          %p
+            %span.label.label-warning Warning
+          %p
+            %span.label.label-danger Danger
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Progress Bars
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          %h5 Basic ProgressBars
+          .progress
+            .progress-bar.progress-bar-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "35", :role => "progressbar", :style => "width: 35%"}
+              %span.sr-only 35% Complete (success)
+          .progress.progress-bar-default
+            .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "43", :role => "progressbar", :style => "width: 43%"}
+              %span.sr-only 43% Complete (success)
+          %h5 Striped Progressbars
+          .progress.progress-striped
+            .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "50", :role => "progressbar", :style => "width: 50%"}
+              %span.sr-only 40% Complete (success)
+          %h5 Active Progressbars
+          .progress.progress-striped.active
+            .progress-bar.progress-bar-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "75", :role => "progressbar", :style => "width: 75%"}
+              %span.sr-only 40% Complete (success)
+          %h5 Stacked Progressbars
+          .progress.progress-striped.active
+            .progress-bar.progress-bar-success{:style => "width: 30%"}
+              %span.sr-only 30% Complete (success)
+            .progress-bar.progress-bar-warning{:style => "width: 20%"}
+              %span.sr-only 15% Complete (warning)
+            .progress-bar.progress-bar-danger{:style => "width: 40%"}
+              %span.sr-only 40% Complete (danger)

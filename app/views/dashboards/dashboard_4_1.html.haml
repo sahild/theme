@@ -1,0 +1,460 @@
+.wrapper.wrapper-content
+  .row
+    .col-md-2
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-success.pull-right Monthly
+          %h5 Views
+        .ibox-content
+          %h1.no-margins 386,200
+          .stat-percent.font-bold.text-success
+            98%
+            %i.fa.fa-bolt
+          %small Total views
+    .col-md-2
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-info.pull-right Annual
+          %h5 Orders
+        .ibox-content
+          %h1.no-margins 80,800
+          .stat-percent.font-bold.text-info
+            20%
+            %i.fa.fa-level-up
+          %small New orders
+    .col-md-4
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-primary.pull-right Today
+          %h5 Vistits
+        .ibox-content
+          .row
+            .col-md-6
+              %h1.no-margins $ 406,420
+              .font-bold.text-navy
+                44%
+                %i.fa.fa-level-up
+                %small Rapid pace
+            .col-md-6
+              %h1.no-margins 206,120
+              .font-bold.text-navy
+                22%
+                %i.fa.fa-level-up
+                %small Slow pace
+    .col-md-4
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Monthly income
+          .ibox-tools
+            %span.label.label-primary Updated 12.2015
+        .ibox-content.no-padding
+          .flot-chart.m-t-lg{:style => "height: 55px;"}
+            #flot-chart1.flot-chart-content
+  .row
+    .col-lg-8
+      .ibox.float-e-margins
+        .ibox-content
+          %div
+            %span.pull-right.text-right
+              %small
+                Average value of sales in the past month in:
+                %strong United states
+              %br/
+              All sales: 162,862
+            %h3.font-bold.no-margins
+              Half-year revenue margin
+            %small Sales marketing.
+          .m-t-sm
+            .row
+              .col-md-8
+                %div
+                  %canvas#lineChart{:height => "114"}
+              .col-md-4
+                %ul.stat-list.m-t-lg
+                  %li
+                    %h2.no-margins 2,346
+                    %small Total orders in period
+                    .progress.progress-mini
+                      .progress-bar{:style => "width: 48%;"}
+                  %li
+                    %h2.no-margins 4,422
+                    %small Orders in last month
+                    .progress.progress-mini
+                      .progress-bar{:style => "width: 60%;"}
+          .m-t-md
+            %small.pull-right
+              %i.fa.fa-clock-o
+              Update on 16.07.2015
+            %small
+              %strong Analysis of sales:
+              The value has been changed over time, and last month reached a level over $50,000.
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-warning.pull-right Data has changed
+          %h5 User activity
+        .ibox-content
+          .row
+            .col-xs-4
+              %small.stats-label Pages / Visit
+              %h4 236 321.80
+            .col-xs-4
+              %small.stats-label % New Visits
+              %h4 46.11%
+            .col-xs-4
+              %small.stats-label Last week
+              %h4 432.021
+        .ibox-content
+          .row
+            .col-xs-4
+              %small.stats-label Pages / Visit
+              %h4 643 321.10
+            .col-xs-4
+              %small.stats-label % New Visits
+              %h4 92.43%
+            .col-xs-4
+              %small.stats-label Last week
+              %h4 564.554
+        .ibox-content
+          .row
+            .col-xs-4
+              %small.stats-label Pages / Visit
+              %h4 436 547.20
+            .col-xs-4
+              %small.stats-label % New Visits
+              %h4 150.23%
+            .col-xs-4
+              %small.stats-label Last week
+              %h4 124.990
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Custom responsive table
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content
+          .row
+            .col-sm-9.m-b-xs
+              .btn-group{"data-toggle" => "buttons"}
+                %label.btn.btn-sm.btn-white
+                  %input#option1{:name => "options", :type => "radio"}/
+                  Day
+                %label.btn.btn-sm.btn-white.active
+                  %input#option2{:name => "options", :type => "radio"}/
+                  Week
+                %label.btn.btn-sm.btn-white
+                  %input#option3{:name => "options", :type => "radio"}/
+                  Month
+            .col-sm-3
+              .input-group
+                %input.input-sm.form-control{:placeholder => "Search", :type => "text"}/
+                %span.input-group-btn
+                  %button.btn.btn-sm.btn-primary{:type => "button"} Go!
+          .table-responsive
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th #
+                  %th Project
+                  %th Name
+                  %th Phone
+                  %th Company
+                  %th Completed
+                  %th Task
+                  %th Date
+                  %th Action
+              %tbody
+                %tr
+                  %td 1
+                  %td
+                    Project
+                    %small This is example of project
+                  %td Patrick Smith
+                  %td 0800 051213
+                  %td Inceptos Hymenaeos Ltd
+                  %td
+                    %span.pie 0.52/1.561
+                  %td 20%
+                  %td Jul 14, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 2
+                  %td Alpha project
+                  %td Alice Jackson
+                  %td 0500 780909
+                  %td Nec Euismod In Company
+                  %td
+                    %span.pie 6,9
+                  %td 40%
+                  %td Jul 16, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 3
+                  %td Betha project
+                  %td John Smith
+                  %td 0800 1111
+                  %td Erat Volutpat
+                  %td
+                    %span.pie 3,1
+                  %td 75%
+                  %td Jul 18, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 4
+                  %td Gamma project
+                  %td Anna Jordan
+                  %td (016977) 0648
+                  %td Tellus Ltd
+                  %td
+                    %span.pie 4,9
+                  %td 18%
+                  %td Jul 22, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 2
+                  %td Alpha project
+                  %td Alice Jackson
+                  %td 0500 780909
+                  %td Nec Euismod In Company
+                  %td
+                    %span.pie 6,9
+                  %td 40%
+                  %td Jul 16, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 1
+                  %td
+                    Project
+                    %small This is example of project
+                  %td Patrick Smith
+                  %td 0800 051213
+                  %td Inceptos Hymenaeos Ltd
+                  %td
+                    %span.pie 0.52/1.561
+                  %td 20%
+                  %td Jul 14, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 4
+                  %td Gamma project
+                  %td Anna Jordan
+                  %td (016977) 0648
+                  %td Tellus Ltd
+                  %td
+                    %span.pie 4,9
+                  %td 18%
+                  %td Jul 22, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 1
+                  %td
+                    Project
+                    %small This is example of project
+                  %td Patrick Smith
+                  %td 0800 051213
+                  %td Inceptos Hymenaeos Ltd
+                  %td
+                    %span.pie 0.52/1.561
+                  %td 20%
+                  %td Jul 14, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 2
+                  %td Alpha project
+                  %td Alice Jackson
+                  %td 0500 780909
+                  %td Nec Euismod In Company
+                  %td
+                    %span.pie 6,9
+                  %td 40%
+                  %td Jul 16, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 3
+                  %td Betha project
+                  %td John Smith
+                  %td 0800 1111
+                  %td Erat Volutpat
+                  %td
+                    %span.pie 3,1
+                  %td 75%
+                  %td Jul 18, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 4
+                  %td Gamma project
+                  %td Anna Jordan
+                  %td (016977) 0648
+                  %td Tellus Ltd
+                  %td
+                    %span.pie 4,9
+                  %td 18%
+                  %td Jul 22, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 2
+                  %td Alpha project
+                  %td Alice Jackson
+                  %td 0500 780909
+                  %td Nec Euismod In Company
+                  %td
+                    %span.pie 6,9
+                  %td 40%
+                  %td Jul 16, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 1
+                  %td
+                    Project
+                    %small This is example of project
+                  %td Patrick Smith
+                  %td 0800 051213
+                  %td Inceptos Hymenaeos Ltd
+                  %td
+                    %span.pie 0.52/1.561
+                  %td 20%
+                  %td Jul 14, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+                %tr
+                  %td 4
+                  %td Gamma project
+                  %td Anna Jordan
+                  %td (016977) 0648
+                  %td Tellus Ltd
+                  %td
+                    %span.pie 4,9
+                  %td 18%
+                  %td Jul 22, 2013
+                  %td
+                    %a{:href => "#"}
+                      %i.fa.fa-check.text-navy
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $("span.pie").peity("pie", {
+            fill: ['#1ab394', '#d7d7d7', '#ffffff']
+        })
+    
+        var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+        var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
+    
+        var data1 = [
+            { label: "Data 1", data: d1, color: '#17a084' },
+            { label: "Data 2", data: d2, color: '#127e68' }
+        ];
+        $.plot($("#flot-chart1"), data1, {
+            xaxis: {
+                tickDecimals: 0
+            },
+            series: {
+                lines: {
+                    show: true,
+                    fill: true,
+                    fillColor: {
+                        colors: [{
+                            opacity: 1
+                        }, {
+                            opacity: 1
+                        }]
+                    },
+                },
+                points: {
+                    width: 0.1,
+                    show: false
+                },
+            },
+            grid: {
+                show: false,
+                borderWidth: 0
+            },
+            legend: {
+                show: false,
+            }
+        });
+    
+        var lineData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [65, 59, 40, 51, 36, 25, 40]
+                },
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(26,179,148,0.5)",
+                    strokeColor: "rgba(26,179,148,0.7)",
+                    pointColor: "rgba(26,179,148,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(26,179,148,1)",
+                    data: [48, 48, 60, 39, 56, 37, 30]
+                }
+            ]
+        };
+    
+        var lineOptions = {
+            scaleShowGridLines: true,
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleGridLineWidth: 1,
+            bezierCurve: true,
+            bezierCurveTension: 0.4,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 20,
+            datasetStroke: true,
+            datasetStrokeWidth: 2,
+            datasetFill: true,
+            responsive: true,
+        };
+    
+    
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var myNewChart = new Chart(ctx).Line(lineData, lineOptions);
+    
+    
+    });

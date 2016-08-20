@@ -1,0 +1,34 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Email Template
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Mailbox
+      %li.active
+        %strong Email Template
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-12
+      .ibox
+        .ibox-title
+          %h5 Responsive transactional HTML email templates
+        .ibox-content
+          %p
+            Transactional HTML emails. Each template is responsive and each has been tested in all the popular email clients. Credits to
+            %a{:href => "https://github.com/mailgun/transactional-email-templates", :target => "_blank"} Maligun
+          .row
+            .col-md-4
+              %h4 Basic action email
+              %a{:href => "#{url_for :controller => 'mailbox', :action => 'basic_action_email'}", :target => "_blank"}
+                %img.img-responsive{:alt => "", :src => "#{image_path('email_1.jpg')}"}/
+            .col-md-4
+              %h4 Email alert
+              %a{:href => "#{url_for :controller => 'mailbox', :action => 'alert_email'}", :target => "_blank"}
+                %img.img-responsive{:alt => "", :src => "#{image_path('email_1.jpg')}"}/
+            .col-md-4
+              %h4 Billing email
+              %a{:href => "#{url_for :controller => 'mailbox', :action => 'billing_email'}", :target => "_blank"}
+                %img.img-responsive{:alt => "", :src => "#{image_path('email_3.jpg')}"}/

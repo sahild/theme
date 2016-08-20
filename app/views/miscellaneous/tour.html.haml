@@ -1,0 +1,106 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Bootstrap Tour
+    %ol.breadcrumb
+      %li
+        %a{:href => "index.html"} Home
+      %li
+        %a Miscellaneous
+      %li.active
+        %strong Bootstrap Tour
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Bootstrap Tour
+        .ibox-content
+          %p
+            Quick and easy way to build your product tours with Bootstrap Popovers.
+          .m-t-sm
+            %a.btn.btn-primary.startTour{:href => "#"}
+              %i.fa.fa-play
+              Start Tour
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Tour steps
+        #step1.ibox-content.text-center
+          .p-sm
+            %h3 Step 1
+  .row
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Tour steps
+        #step2.ibox-content.text-center
+          .p-sm
+            %h3 Step 2
+    .col-md-6
+      .ibox
+        .ibox-title
+          %h5 Tour steps
+        #step3.ibox-content.text-center
+          .p-sm
+            %h3 Step 3
+  .row
+    .col-md-12
+      .ibox
+        .ibox-title
+          %h5 Tour steps
+        #step4.ibox-content.text-center
+          .p-xl
+            %h3 Step 4
+- content_for :javascript do
+  :javascript
+    $(function() {
+
+        // Instance the tour
+        var tour = new Tour({
+            steps: [{
+
+                element: "#step1",
+                title: "Title of my step",
+                content: "Introduce new users to your product by walking them through it step by step.",
+                placement: "top"
+            },
+                {
+                    element: "#step2",
+                    title: "Title of my step",
+                    content: "Content of my step",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#wrapper',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#step3",
+                    title: "Title of my step",
+                    content: "Introduce new users to your product by walking them through it step by step.",
+                    placement: "bottom"
+                },
+                {
+                    element: "#step4",
+                    title: "Title of my step",
+                    content: "Introduce new users to your product by walking them through it step by step.",
+                    placement: "top"
+                }
+            ]});
+
+        // Initialize the tour
+        tour.init();
+
+        $('.startTour').click(function(){
+            tour.restart();
+
+            // Start the tour
+            // tour.start();
+        })
+
+    });

@@ -1,0 +1,491 @@
+.wrapper.wrapper-content
+  .row
+    .col-lg-3
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-success.pull-right Monthly
+          %h5 Income
+        .ibox-content
+          %h1.no-margins 40 886,200
+          .stat-percent.font-bold.text-success
+            98%
+            %i.fa.fa-bolt
+          %small Total income
+    .col-lg-3
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-info.pull-right Annual
+          %h5 Orders
+        .ibox-content
+          %h1.no-margins 275,800
+          .stat-percent.font-bold.text-info
+            20%
+            %i.fa.fa-level-up
+          %small New orders
+    .col-lg-3
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-primary.pull-right Today
+          %h5 Vistits
+        .ibox-content
+          %h1.no-margins 106,120
+          .stat-percent.font-bold.text-navy
+            44%
+            %i.fa.fa-level-up
+          %small New visits
+    .col-lg-3
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-danger.pull-right Low value
+          %h5 User activity
+        .ibox-content
+          %h1.no-margins 80,600
+          .stat-percent.font-bold.text-danger
+            38%
+            %i.fa.fa-level-down
+          %small In first month
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Orders
+          .pull-right
+            .btn-group
+              %button.btn.btn-xs.btn-white.active{:type => "button"} Today
+              %button.btn.btn-xs.btn-white{:type => "button"} Monthly
+              %button.btn.btn-xs.btn-white{:type => "button"} Annual
+        .ibox-content
+          .row
+            .col-lg-9
+              .flot-chart
+                #flot-dashboard-chart.flot-chart-content
+            .col-lg-3
+              %ul.stat-list
+                %li
+                  %h2.no-margins 2,346
+                  %small Total orders in period
+                  .stat-percent
+                    48%
+                    %i.fa.fa-level-up.text-navy
+                  .progress.progress-mini
+                    .progress-bar{:style => "width: 48%;"}
+                %li
+                  %h2.no-margins 4,422
+                  %small Orders in last month
+                  .stat-percent
+                    60%
+                    %i.fa.fa-level-down.text-navy
+                  .progress.progress-mini
+                    .progress-bar{:style => "width: 60%;"}
+                %li
+                  %h2.no-margins 9,180
+                  %small Monthly income from orders
+                  .stat-percent
+                    22%
+                    %i.fa.fa-bolt.text-navy
+                  .progress.progress-mini
+                    .progress-bar{:style => "width: 22%;"}
+  .row
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Messages
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content.ibox-heading
+          %h3
+            %i.fa.fa-envelope-o
+            New messages
+          %small
+            %i.fa.fa-tim
+            You have 22 new messages and 16 waiting in draft folder.
+        .ibox-content
+          .feed-activity-list
+            .feed-element
+              %div
+                %small.pull-right.text-navy 1m ago
+                %strong Monica Smith
+                %div Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                %small.text-muted Today 5:60 pm - 12.06.2014
+            .feed-element
+              %div
+                %small.pull-right 2m ago
+                %strong Jogn Angel
+                %div There are many variations of passages of Lorem Ipsum available
+                %small.text-muted Today 2:23 pm - 11.06.2014
+            .feed-element
+              %div
+                %small.pull-right 5m ago
+                %strong Jesica Ocean
+                %div Contrary to popular belief, Lorem Ipsum
+                %small.text-muted Today 1:00 pm - 08.06.2014
+            .feed-element
+              %div
+                %small.pull-right 5m ago
+                %strong Monica Jackson
+                %div The generated Lorem Ipsum is therefore
+                %small.text-muted Yesterday 8:48 pm - 10.06.2014
+            .feed-element
+              %div
+                %small.pull-right 5m ago
+                %strong Anna Legend
+                %div All the Lorem Ipsum generators on the Internet tend to repeat
+                %small.text-muted Yesterday 8:48 pm - 10.06.2014
+            .feed-element
+              %div
+                %small.pull-right 5m ago
+                %strong Damian Nowak
+                %div The standard chunk of Lorem Ipsum used
+                %small.text-muted Yesterday 8:48 pm - 10.06.2014
+            .feed-element
+              %div
+                %small.pull-right 5m ago
+                %strong Gary Smith
+                %div 200 Latin words, combined with a handful
+                %small.text-muted Yesterday 8:48 pm - 10.06.2014
+    .col-lg-8
+      .row
+        .col-lg-6
+          .ibox.float-e-margins
+            .ibox-title
+              %h5 User project list
+              .ibox-tools
+                %a.collapse-link
+                  %i.fa.fa-chevron-up
+                %a.close-link
+                  %i.fa.fa-times
+            .ibox-content
+              %table.table.table-hover.no-margins
+                %thead
+                  %tr
+                    %th Status
+                    %th Date
+                    %th User
+                    %th Value
+                %tbody
+                  %tr
+                    %td
+                      %small Pending...
+                    %td
+                      %i.fa.fa-clock-o
+                      11:20pm
+                    %td Samantha
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      24%
+                  %tr
+                    %td
+                      %span.label.label-warning Canceled
+                    %td
+                      %i.fa.fa-clock-o
+                      10:40am
+                    %td Monica
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      66%
+                  %tr
+                    %td
+                      %small Pending...
+                    %td
+                      %i.fa.fa-clock-o
+                      01:30pm
+                    %td John
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      54%
+                  %tr
+                    %td
+                      %small Pending...
+                    %td
+                      %i.fa.fa-clock-o
+                      02:20pm
+                    %td Agnes
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      12%
+                  %tr
+                    %td
+                      %small Pending...
+                    %td
+                      %i.fa.fa-clock-o
+                      09:40pm
+                    %td Janet
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      22%
+                  %tr
+                    %td
+                      %span.label.label-primary Completed
+                    %td
+                      %i.fa.fa-clock-o
+                      04:10am
+                    %td Amelia
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      66%
+                  %tr
+                    %td
+                      %small Pending...
+                    %td
+                      %i.fa.fa-clock-o
+                      12:08am
+                    %td Damian
+                    %td.text-navy
+                      %i.fa.fa-level-up
+                      23%
+        .col-lg-6
+          .ibox.float-e-margins
+            .ibox-title
+              %h5 Small todo list
+              .ibox-tools
+                %a.collapse-link
+                  %i.fa.fa-chevron-up
+                %a.close-link
+                  %i.fa.fa-times
+            .ibox-content
+              %ul.todo-list.m-t.small-list
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-check-square
+                  %span.m-l-xs.todo-completed Buy a milk
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-square-o
+                  %span.m-l-xs Go to shop and find some products.
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-square-o
+                  %span.m-l-xs Send documents to Mike
+                  %small.label.label-primary
+                    %i.fa.fa-clock-o
+                    1 mins
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-square-o
+                  %span.m-l-xs Go to the doctor dr Smith
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-check-square
+                  %span.m-l-xs.todo-completed Plan vacation
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-square-o
+                  %span.m-l-xs Create new stuff
+                %li
+                  %a.check-link{:href => "#"}
+                    %i.fa.fa-square-o
+                  %span.m-l-xs Call to Anna for dinner
+      .row
+        .col-lg-12
+          .ibox.float-e-margins
+            .ibox-title
+              %h5 Transactions worldwide
+              .ibox-tools
+                %a.collapse-link
+                  %i.fa.fa-chevron-up
+                %a.close-link
+                  %i.fa.fa-times
+            .ibox-content
+              .row
+                .col-lg-6
+                  %table.table.table-hover.margin.bottom
+                    %thead
+                      %tr
+                        %th.text-center{:style => "width: 1%"} No.
+                        %th Transaction
+                        %th.text-center Date
+                        %th.text-center Amount
+                    %tbody
+                      %tr
+                        %td.text-center 1
+                        %td
+                          Security doors
+                        %td.text-center.small 16 Jun 2014
+                        %td.text-center
+                          %span.label.label-primary $483.00
+                      %tr
+                        %td.text-center 2
+                        %td
+                          Wardrobes
+                        %td.text-center.small 10 Jun 2014
+                        %td.text-center
+                          %span.label.label-primary $327.00
+                      %tr
+                        %td.text-center 3
+                        %td
+                          Set of tools
+                        %td.text-center.small 12 Jun 2014
+                        %td.text-center
+                          %span.label.label-warning $125.00
+                      %tr
+                        %td.text-center 4
+                        %td Panoramic pictures
+                        %td.text-center.small 22 Jun 2013
+                        %td.text-center
+                          %span.label.label-primary $344.00
+                      %tr
+                        %td.text-center 5
+                        %td Phones
+                        %td.text-center.small 24 Jun 2013
+                        %td.text-center
+                          %span.label.label-primary $235.00
+                      %tr
+                        %td.text-center 6
+                        %td Monitors
+                        %td.text-center.small 26 Jun 2013
+                        %td.text-center
+                          %span.label.label-primary $100.00
+                .col-lg-6
+                  #world-map{:style => "height: 300px;"}
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        var data2 = [
+            [gd(2012, 1, 1), 7], [gd(2012, 1, 2), 6], [gd(2012, 1, 3), 4], [gd(2012, 1, 4), 8],
+            [gd(2012, 1, 5), 9], [gd(2012, 1, 6), 7], [gd(2012, 1, 7), 5], [gd(2012, 1, 8), 4],
+            [gd(2012, 1, 9), 7], [gd(2012, 1, 10), 8], [gd(2012, 1, 11), 9], [gd(2012, 1, 12), 6],
+            [gd(2012, 1, 13), 4], [gd(2012, 1, 14), 5], [gd(2012, 1, 15), 11], [gd(2012, 1, 16), 8],
+            [gd(2012, 1, 17), 8], [gd(2012, 1, 18), 11], [gd(2012, 1, 19), 11], [gd(2012, 1, 20), 6],
+            [gd(2012, 1, 21), 6], [gd(2012, 1, 22), 8], [gd(2012, 1, 23), 11], [gd(2012, 1, 24), 13],
+            [gd(2012, 1, 25), 7], [gd(2012, 1, 26), 9], [gd(2012, 1, 27), 9], [gd(2012, 1, 28), 8],
+            [gd(2012, 1, 29), 5], [gd(2012, 1, 30), 8], [gd(2012, 1, 31), 25]
+        ];
+    
+        var data3 = [
+            [gd(2012, 1, 1), 800], [gd(2012, 1, 2), 500], [gd(2012, 1, 3), 600], [gd(2012, 1, 4), 700],
+            [gd(2012, 1, 5), 500], [gd(2012, 1, 6), 456], [gd(2012, 1, 7), 800], [gd(2012, 1, 8), 589],
+            [gd(2012, 1, 9), 467], [gd(2012, 1, 10), 876], [gd(2012, 1, 11), 689], [gd(2012, 1, 12), 700],
+            [gd(2012, 1, 13), 500], [gd(2012, 1, 14), 600], [gd(2012, 1, 15), 700], [gd(2012, 1, 16), 786],
+            [gd(2012, 1, 17), 345], [gd(2012, 1, 18), 888], [gd(2012, 1, 19), 888], [gd(2012, 1, 20), 888],
+            [gd(2012, 1, 21), 987], [gd(2012, 1, 22), 444], [gd(2012, 1, 23), 999], [gd(2012, 1, 24), 567],
+            [gd(2012, 1, 25), 786], [gd(2012, 1, 26), 666], [gd(2012, 1, 27), 888], [gd(2012, 1, 28), 900],
+            [gd(2012, 1, 29), 178], [gd(2012, 1, 30), 555], [gd(2012, 1, 31), 993]
+        ];
+    
+    
+        var dataset = [
+            {
+                label: "Number of orders",
+                data: data3,
+                color: "#1ab394",
+                bars: {
+                    show: true,
+                    align: "center",
+                    barWidth: 24 * 60 * 60 * 600,
+                    lineWidth: 0
+                }
+    
+            }, {
+                label: "Payments",
+                data: data2,
+                yaxis: 2,
+                color: "#1C84C6",
+                lines: {
+                    lineWidth: 1,
+                    show: true,
+                    fill: true,
+                    fillColor: {
+                        colors: [{
+                            opacity: 0.2
+                        }, {
+                            opacity: 0.2
+                        }]
+                    }
+                },
+                splines: {
+                    show: false,
+                    tension: 0.6,
+                    lineWidth: 1,
+                    fill: 0.1
+                },
+            }
+        ];
+    
+    
+        var options = {
+            xaxis: {
+                mode: "time",
+                tickSize: [3, "day"],
+                tickLength: 0,
+                axisLabel: "Date",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Arial',
+                axisLabelPadding: 10,
+                color: "#d5d5d5"
+            },
+            yaxes: [{
+                position: "left",
+                max: 1070,
+                color: "#d5d5d5",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Arial',
+                axisLabelPadding: 3
+            }, {
+                position: "right",
+                clolor: "#d5d5d5",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: ' Arial',
+                axisLabelPadding: 67
+            }
+            ],
+            legend: {
+                noColumns: 1,
+                labelBoxBorderColor: "#000000",
+                position: "nw"
+            },
+            grid: {
+                hoverable: false,
+                borderWidth: 0
+            }
+        };
+    
+        function gd(year, month, day) {
+            return new Date(year, month - 1, day).getTime();
+        }
+    
+        var previousPoint = null, previousLabel = null;
+    
+        $.plot($("#flot-dashboard-chart"), dataset, options);
+    
+        var mapData = {
+            "US": 298,
+            "SA": 200,
+            "DE": 220,
+            "FR": 540,
+            "CN": 120,
+            "AU": 760,
+            "BR": 550,
+            "IN": 200,
+            "GB": 120,
+        };
+    
+        $('#world-map').vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: "transparent",
+            regionStyle: {
+                initial: {
+                    fill: '#e4e4e4',
+                    "fill-opacity": 0.9,
+                    stroke: 'none',
+                    "stroke-width": 0,
+                    "stroke-opacity": 0
+                }
+            },
+    
+            series: {
+                regions: [{
+                    values: mapData,
+                    scale: ["#1ab394", "#22d6b1"],
+                    normalizeFunction: 'polynomial'
+                }]
+            },
+        });
+    
+    });

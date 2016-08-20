@@ -1,0 +1,135 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Validation
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Tables
+      %li.active
+        %strong Validation
+  .col-lg-2
+.wrapper.wrapper-content.animated.fadeInRight
+  .row
+    .col-lg-6
+      .ibox
+        .ibox-title
+          %h5 Validation
+        .ibox-content
+          %h2
+            jQuery Validation Plugin - Form validation made easy
+          %p
+            The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all kinds of customizations to fit your application really easy.
+          %p.font-bold Example form with custom validation on each form control
+          %form#form{:role => "form"}
+            .form-group
+              %label Email
+              %input.form-control{:placeholder => "Enter email", :required => "", :type => "email"}/
+            .form-group
+              %label Password
+              %input.form-control{:name => "password", :placeholder => "Password", :type => "password"}/
+            .form-group
+              %label Url
+              %input.form-control{:name => "url", :placeholder => "Enter URL", :type => "text"}/
+            .form-group
+              %label Number
+              %input.form-control{:name => "number", :placeholder => "Enter Number", :type => "text"}/
+            .form-group
+              %label MinLength
+              %input.form-control{:name => "min", :placeholder => "Enter text", :type => "text"}/
+            .form-group
+              %label MaxLength
+              %input.form-control{:name => "max", :placeholder => "Enter text", :type => "text"}/
+            %div
+              %button.btn.btn-sm.btn-primary.m-t-n-xs{:type => "submit"}
+                %strong Submit
+    .col-lg-6
+      .ibox
+        .ibox-title
+          %h5 Methods
+        .ibox-content
+          %h2
+            List of built-in Validation methods
+          %p
+            A set of standard validation methods is provided:
+          %table.table.table-bordered
+            %thead
+              %tr
+                %th Method
+                %th Description
+            %tbody
+              %tr
+                %td remote
+                %td Requests a resource to check the element for validity.
+              %tr
+                %td minlength
+                %td Makes the element require a given minimum length.
+              %tr
+                %td maxlength
+                %td Makes the element require a given maxmimum length.
+              %tr
+                %td rangelength
+                %td Makes the element require a given value range.
+              %tr
+                %td min
+                %td Makes the element require a given minimum.
+              %tr
+                %td max
+                %td Makes the element require a given maximum.
+              %tr
+                %td range
+                %td Makes the element require a given value range.
+              %tr
+                %td email
+                %td Makes the element require a valid email
+              %tr
+                %td url
+                %td Makes the element require a valid url
+              %tr
+                %td date
+                %td Makes the element require a date.
+              %tr
+                %td dateISO
+                %td Makes the element require an ISO date.
+              %tr
+                %td number
+                %td Makes the element require a decimal number.
+              %tr
+                %td digits
+                %td Makes the element require digits only.
+              %tr
+                %td creditcard
+                %td Makes the element require a credit card number.
+              %tr
+                %td equalTo
+                %td Requires the element to be the same as another one
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $("#form").validate({
+            rules: {
+                password: {
+                    required: true,
+                    minlength: 3
+                },
+                url: {
+                    required: true,
+                    url: true
+                },
+                number: {
+                    required: true,
+                    number: true
+                },
+                min: {
+                    required: true,
+                    minlength: 6
+                },
+                max: {
+                    required: true,
+                    maxlength: 4
+                }
+            }
+        });
+    
+    });

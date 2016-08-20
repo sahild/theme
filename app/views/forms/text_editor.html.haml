@@ -1,0 +1,109 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Text Editor
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a Forms
+      %li.active
+        %strong Text Editor
+  .col-lg-2
+.wrapper.wrapper-content
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          %h5 Wyswig Summernote Editor
+          .ibox-tools
+            %a.collapse-link
+              %i.fa.fa-chevron-up
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %i.fa.fa-wrench
+            %ul.dropdown-menu.dropdown-user
+              %li
+                %a{:href => "#"} Config option 1
+              %li
+                %a{:href => "#"} Config option 2
+            %a.close-link
+              %i.fa.fa-times
+        .ibox-content.no-padding
+          .summernote
+            %h3 Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry.
+            %strong Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+            %br/
+            %br/
+            %ul
+              %li Remaining essentially unchanged
+              %li Make a type specimen book
+              %li Unknown printer
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          %h2
+            Summernote
+          %p
+            Super Simple WYSIWYG Editor on Bootstrap
+          .alert.alert-warning
+            Full documentation for Summernote.js, including examples and API calls, keybored shortcuts, PHP Examples, Django installation, and Rails (gem) integration can be found at:
+            %a{:href => "http://hackerwins.github.io/summernote/features.html#api"} http://hackerwins.github.io/summernote/features.html#api
+            / <div class="summernote">summernote 2</div>
+  %form#form
+    .row
+      .col-lg-12
+        .ibox.float-e-margins
+          .ibox-title
+            %h5 Example of Edit by click and save as a html
+            %button#edit.btn.btn-primary.btn-xs.m-l-sm{:type => "button"} Edit
+            %button#save.btn.btn-primary.btn-xs{:type => "button"} Save
+            .ibox-tools
+              %a.collapse-link
+                %i.fa.fa-chevron-up
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.fa.fa-wrench
+              %ul.dropdown-menu.dropdown-user
+                %li
+                  %a{:href => "#"} Config option 1
+                %li
+                  %a{:href => "#"} Config option 2
+              %a.close-link
+                %i.fa.fa-times
+          .ibox-content.no-padding
+            .click2edit.wrapper.p-md
+              %h3 Lorem Ipsum is simply
+              dummy text of the printing and typesetting industry.
+              %strong Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+              %br/
+              %br/
+              %ul
+                %li Remaining essentially unchanged
+                %li Make a type specimen book
+                %li Unknown printer
+- content_for :javascript do
+  :javascript
+    $(function() {
+    
+        $('.summernote').summernote();
+    
+        var edit = function () {
+            $('.click2edit').summernote({ focus: true });
+        };
+    
+        $("#edit").click(function () {
+            $('.click2edit').summernote({ focus: true });
+        });
+    
+        $("#save").click(function () {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        });
+    
+    });

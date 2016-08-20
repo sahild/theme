@@ -1,0 +1,526 @@
+.row.wrapper.border-bottom.white-bg.page-heading
+  .col-lg-10
+    %h2 Buttons
+    %ol.breadcrumb
+      %li
+        %a{:href => "#{url_for :controller => 'dashboards', :action => 'dashboard_1'}"} Home
+      %li
+        %a UI Elements
+      %li.active
+        %strong Buttons
+  .col-lg-2
+.row.wrapper.wrapper-content.animated.fadeInRight
+  .col-lg-4
+    .ibox.float-e-margins
+      .ibox-title
+        %h5 Colors buttons
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        %p
+          Use any of the available button classes to quickly create a styled button.
+        %h3.font-bold
+          Normal buttons
+        %p
+          %button.btn.btn-w-m.btn-default{:type => "button"} Default
+          %button.btn.btn-w-m.btn-primary{:type => "button"} Primary
+          %button.btn.btn-w-m.btn-success{:type => "button"} Success
+          %button.btn.btn-w-m.btn-info{:type => "button"} Info
+          %button.btn.btn-w-m.btn-warning{:type => "button"} Warning
+          %button.btn.btn-w-m.btn-danger{:type => "button"} Danger
+          %button.btn.btn-w-m.btn-white{:type => "button"} Danger
+          %button.btn.btn-w-m.btn-link{:type => "button"} Link
+  .col-lg-4
+    .ibox.float-e-margins
+      .ibox-title
+        %h5 Diferent size
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        %p
+          If You want larger or smaller buttons You can add
+          = succeed "," do
+            %code .btn-lg
+          = succeed "," do
+            %code .btn-sm
+          %code .btn-xs
+          class.
+        %h3.font-bold Button Sizes
+        %p
+          %button.btn.btn-primary.btn-lg{:type => "button"} Large button
+          %button.btn.btn-default.btn-lg{:type => "button"} Large button
+          %br/
+          %button.btn.btn-primary{:type => "button"} Default button
+          %button.btn.btn-default{:type => "button"} Default button
+          %br/
+          %button.btn.btn-primary.btn-sm{:type => "button"} Small button
+          %button.btn.btn-default.btn-sm{:type => "button"} Small button
+          %br/
+          %button.btn.btn-primary.btn-xs{:type => "button"} Mini button
+          %button.btn.btn-default.btn-xs{:type => "button"} Mini button
+  .col-lg-4
+    .ibox.float-e-margins
+      .ibox-title
+        %h5 Outline and Block Buttons
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        %p
+          Create block level buttons or outline buttons, by adding
+          %code .btn-block
+          or
+          = succeed "." do
+            %code .btn-outline
+        %h3.font-bold Outline buttons
+        %p
+          %button.btn.btn-outline.btn-default{:type => "button"} Default
+          %button.btn.btn-outline.btn-primary{:type => "button"} Primary
+          %button.btn.btn-outline.btn-success{:type => "button"} Success
+          %button.btn.btn-outline.btn-info{:type => "button"} Info
+          %button.btn.btn-outline.btn-warning{:type => "button"} Warning
+          %button.btn.btn-outline.btn-danger{:type => "button"} Danger
+          %button.btn.btn-outline.btn-link{:type => "button"} Link
+        %h3.font-bold Block buttons
+        %p
+          %button.btn.btn-block.btn-outline.btn-primary{:type => "button"} Primary
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+        %h5 3D Buttons
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        %p
+          To add three diminsion to buttons You can add
+          %code .dim
+          class to button.
+        %h3.font-bold Three diminsion button
+        %button.btn.btn-primary.dim.btn-large-dim{:type => "button"}
+          %i.fa.fa-money
+        %button.btn.btn-warning.dim.btn-large-dim{:type => "button"}
+          %i.fa.fa-warning
+        %button.btn.btn-danger.dim.btn-large-dim{:type => "button"}
+          %i.fa.fa-heart
+        %button.btn.btn-primary.dim.btn-large-dim{:type => "button"}
+          %i.fa.fa-dollar>
+          6
+        %button.btn.btn-info.dim.btn-large-dim.btn-outline{:type => "button"}
+          %i.fa.fa-ruble
+        %button.btn.btn-primary.dim{:type => "button"}
+          %i.fa.fa-money
+        %button.btn.btn-warning.dim{:type => "button"}
+          %i.fa.fa-warning
+        %button.btn.btn-primary.dim{:type => "button"}
+          %i.fa.fa-check
+        %button.btn.btn-success.dim{:type => "button"}
+          %i.fa.fa-upload
+        %button.btn.btn-info.dim{:type => "button"}
+          %i.fa.fa-paste
+        %button.btn.btn-warning.dim{:type => "button"}
+          %i.fa.fa-warning
+        %button.btn.btn-default.dim{:type => "button"}
+          %i.fa.fa-star
+        %button.btn.btn-danger.dim{:type => "button"}
+          %i.fa.fa-heart
+        %button.btn.btn-outline.btn-primary.dim{:type => "button"}
+          %i.fa.fa-money
+        %button.btn.btn-outline.btn-warning.dim{:type => "button"}
+          %i.fa.fa-warning
+        %button.btn.btn-outline.btn-primary.dim{:type => "button"}
+          %i.fa.fa-check
+        %button.btn.btn-outline.btn-success.dim{:type => "button"}
+          %i.fa.fa-upload
+        %button.btn.btn-outline.btn-info.dim{:type => "button"}
+          %i.fa.fa-paste
+        %button.btn.btn-outline.btn-warning.dim{:type => "button"}
+          %i.fa.fa-warning
+        %button.btn.btn-outline.btn-danger.dim{:type => "button"}
+          %i.fa.fa-heart
+  .col-lg-12
+    .row
+      .col-lg-6
+        .ibox.float-e-margins
+          .ibox-title
+            %h5 Button dropdowns
+            .ibox-tools
+              %a.collapse-link
+                %i.fa.fa-chevron-up
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.fa.fa-wrench
+              %ul.dropdown-menu.dropdown-user
+                %li
+                  %a{:href => "#"} Config option 1
+                %li
+                  %a{:href => "#"} Config option 2
+              %a.close-link
+                %i.fa.fa-times
+          .ibox-content
+            %p
+              Droppdowns buttons are avalible with any color and any size.
+            %h3.font-bold Dropdowns
+            .btn-group
+              %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a.font-bold{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            %br/
+            .btn-group
+              %button.btn.btn-primary.btn-sm.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-warning.btn-sm.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-default.btn-sm.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            %br/
+            .btn-group
+              %button.btn.btn-primary.btn-xs.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-warning.btn-xs.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+            .btn-group
+              %button.btn.btn-default.btn-xs.dropdown-toggle{"data-toggle" => "dropdown"}
+                Action
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Action
+                %li
+                  %a{:href => "#"} Another action
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+      .col-lg-6
+        .ibox.float-e-margins
+          .ibox-title
+            %h5 Grouped Buttons
+            .ibox-tools
+              %a.collapse-link
+                %i.fa.fa-chevron-up
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.fa.fa-wrench
+              %ul.dropdown-menu.dropdown-user
+                %li
+                  %a{:href => "#"} Config option 1
+                %li
+                  %a{:href => "#"} Config option 2
+              %a.close-link
+                %i.fa.fa-times
+          .ibox-content
+            %p
+              This is a group of buttons, ideal for sytuation where many actions are related to same element.
+            %h3.font-bold Button Group
+            .btn-group
+              %button.btn.btn-white{:type => "button"} Left
+              %button.btn.btn-primary{:type => "button"} Middle
+              %button.btn.btn-white{:type => "button"} Right
+            %br/
+            %br/
+            .btn-group
+              %button.btn.btn-white{:type => "button"}
+                %i.fa.fa-chevron-left
+              %button.btn.btn-white 1
+              %button.btn.btn-white.active 2
+              %button.btn.btn-white 3
+              %button.btn.btn-white 4
+              %button.btn.btn-white{:type => "button"}
+                %i.fa.fa-chevron-right
+    .ibox.float-e-margins
+      .ibox-title
+        %h5 Icon Buttons
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        %p
+          To buttons with any color or any size you can add extra icon on the left or the right side.
+        %h3.font-bold Commom Icon Buttons
+        %p
+          %button.btn.btn-primary{:type => "button"}
+            %i.fa.fa-check>
+             Submit
+          %button.btn.btn-success{:type => "button"}
+            %i.fa.fa-upload>
+              
+            %span.bold Upload
+          %button.btn.btn-info{:type => "button"}
+            %i.fa.fa-paste
+            Edit
+          %button.btn.btn-warning{:type => "button"}
+            %i.fa.fa-warning
+            %span.bold Warning
+          %button.btn.btn-default{:type => "button"}
+            %i.fa.fa-map-marker>
+              Map
+          %a.btn.btn-success.btn-facebook
+            %i.fa.fa-facebook
+            Sign in with Facebook
+          %a.btn.btn-success.btn-facebook.btn-outline
+            %i.fa.fa-facebook
+            Sign in with Facebook
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-user-md
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-group
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-wrench
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-exchange
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-check-circle-o
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-road
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-ambulance
+          %a.btn.btn-white.btn-bitbucket
+            %i.fa.fa-star
+            Stared
+        %h3.font-bold Toggle buttons Variations
+        %p Button groups can act as a radio or a switch or even a single toggle. Below are some examples click to see what happens
+        %button.btn.btn-primary.btn-outline{"data-toggle" => "button", :type => "button"} Single Toggle
+        %button.btn.btn-primary{"data-toggle" => "button", :type => "button"} Single Toggle
+        .btn-group{"data-toggle" => "buttons-checkbox"}
+          %button.btn.btn-primary.active{:type => "button"}
+            %i.fa.fa-bold
+            Bold
+          %button.btn.btn-primary{:type => "button"}
+            %i.fa.fa-underline
+            Underline
+          %button.btn.btn-primary.active{:type => "button"}
+            %i.fa.fa-italic
+            Italic
+  .col-lg-12
+    .row
+      .col-lg-6
+        .ibox.float-e-margins
+          .ibox-title
+            %h5 Circle Icon Buttons
+            .ibox-tools
+              %a.collapse-link
+                %i.fa.fa-chevron-up
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.fa.fa-wrench
+              %ul.dropdown-menu.dropdown-user
+                %li
+                  %a{:href => "#"} Config option 1
+                %li
+                  %a{:href => "#"} Config option 2
+              %a.close-link
+                %i.fa.fa-times
+          .ibox-content
+            %p
+              For buttons you can add
+              %code .btn-circle
+              to rounded buttons and make it circle.
+            %h3.font-bold Circle buttons
+            %br/
+            %button.btn.btn-default.btn-circle{:type => "button"}
+              %i.fa.fa-check
+            %button.btn.btn-primary.btn-circle{:type => "button"}
+              %i.fa.fa-list
+            %button.btn.btn-success.btn-circle{:type => "button"}
+              %i.fa.fa-link
+            %button.btn.btn-info.btn-circle{:type => "button"}
+              %i.fa.fa-check
+            %button.btn.btn-warning.btn-circle{:type => "button"}
+              %i.fa.fa-times
+            %button.btn.btn-danger.btn-circle{:type => "button"}
+              %i.fa.fa-heart
+            %button.btn.btn-danger.btn-circle.btn-outline{:type => "button"}
+              %i.fa.fa-heart
+            %br/
+            %br/
+            %button.btn.btn-default.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-check
+            %button.btn.btn-primary.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-list
+            %button.btn.btn-success.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-link
+            %button.btn.btn-info.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-check
+            %button.btn.btn-warning.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-times
+            %button.btn.btn-danger.btn-circle.btn-lg{:type => "button"}
+              %i.fa.fa-heart
+            %button.btn.btn-danger.btn-circle.btn-lg.btn-outline{:type => "button"}
+              %i.fa.fa-heart
+      .col-lg-6
+        .ibox.float-e-margins
+          .ibox-title
+            %h5 Rounded Buttons
+            .ibox-tools
+              %a.collapse-link
+                %i.fa.fa-chevron-up
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.fa.fa-wrench
+              %ul.dropdown-menu.dropdown-user
+                %li
+                  %a{:href => "#"} Config option 1
+                %li
+                  %a{:href => "#"} Config option 2
+              %a.close-link
+                %i.fa.fa-times
+          .ibox-content
+            %p
+              You can also add
+              %code .btn-rounded
+              class to round buttons.
+            %h3.font-bold Button Group
+            %p
+              %a.btn.btn-default.btn-rounded{:href => "#"} Default
+              %a.btn.btn-primary.btn-rounded{:href => "#"} Primary
+              %a.btn.btn-success.btn-rounded{:href => "#"} Success
+              %a.btn.btn-info.btn-rounded{:href => "#"} Info
+              %a.btn.btn-warning.btn-rounded{:href => "#"} Warning
+              %a.btn.btn-danger.btn-rounded{:href => "#"} Danger
+              %a.btn.btn-danger.btn-rounded.btn-outline{:href => "#"} Danger
+              %br/
+              %br/
+              %a.btn.btn-primary.btn-rounded.btn-block{:href => "#"}
+                %i.fa.fa-info-circle
+                Block rounded with icon button
